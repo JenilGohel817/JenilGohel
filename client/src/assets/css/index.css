@@ -1,0 +1,162 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: auto;
+}
+
+:root {
+  --jg-white: #fff;
+  --jg-black: #000;
+  --jg-color-1: #ccc;
+  --jg-color-2: #666;
+  --jg-color-3: #999;
+  --jg-accent-1: #fa4529;
+  --jg-accent-2: #e03d24;
+  --jg-accent-3: #690;
+  --jg-accent-4: #09f;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+section, .jg-section {
+  position: relative;
+  padding: 5rem 0;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.jg-container {
+  max-width: 1600px;
+  padding: 0 25px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Scroll Bar */
+
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+
+html ::-webkit-scrollbar-track {
+  background-color: var(--jg-color-1);
+}
+
+html ::-webkit-scrollbar-thumb {
+  background-color: var(--jg-accent-1);
+}
+
+.jg-fw100 {
+  font-weight: 100;
+}
+
+.jg-fw200 {
+  font-weight: 200;
+}
+
+.jg-fw300 {
+  font-weight: 300;
+}
+
+.jg-fw400 {
+  font-weight: 400;
+}
+
+.jg-fw500 {
+  font-weight: 500;
+}
+
+.jg-fw600 {
+  font-weight: 600;
+}
+
+.jg-fw700 {
+  font-weight: 700;
+}
+
+.jg-fw800 {
+  font-weight: 800;
+}
+
+.jg-text-left {
+  text-align: left;
+}
+
+.jg-text-right {
+  text-align: right;
+}
+
+.jg-w1076 {
+  max-width: 1076px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.jg-w360 {
+  max-width: 360px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.jg-w760 {
+  max-width: 760px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.jg-py {
+  padding: 5rem 0;
+}
+

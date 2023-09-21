@@ -1,0 +1,48 @@
+.jg-hero-title {
+    text-align: center;
+}
+
+.jg-hero-title span {
+    display: block;
+}
+
+.jg-grid {
+    display: grid;
+    align-content: center;
+    justify-content: space-between;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    align-items: center;
+    grid-auto-flow: column;
+}
+
+.jg-info-item {
+    width: 100%;
+    max-width: 360px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.jg-info-image-wrapper {
+    width: 670px;
+    height: 825px;
+    border: 1px solid var(--jg-color-3);
+    border-radius: 5rem;
+}
+
+.jg-info-image {
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+}
+
+.jg-info-image img {
+    border-radius: 5rem;
+}
+
+.jg-info-heading {
+    font-size: .875rem;
+    color: var(--jg-color-3);
+    font-weight: 400;
+    padding-bottom: 3rem;
+}
