@@ -1,0 +1,30 @@
+.jg-header {
+    background: var(--jg-white);
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--jg-primary);
+}
+
+.jg-logo {
+    font-size: 3.5rem;
+}
+
+.jg-header-menu-right {
+    margin-left: auto;
+}
+
+.jg-header-link {
+    cursor: pointer;
+    color: var(--jg-white);
+    background: var(--jg-secondary);
+    margin-left: 5px;
+    border-radius: 0px;
+    margin-right: 5px;
+    padding: 8px 30px;
+    transition: background .2s ease-in-out 0s;
+    position: relative;
+}
+
+.jg-header-link:hover {
+    background: #5288fe;
+}

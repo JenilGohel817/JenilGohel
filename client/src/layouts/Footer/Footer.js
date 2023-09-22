@@ -1,9 +1,13 @@
+import "./Footer.css";
+
 const Footer = () => {
   return (
     <>
-      <footer>
+      <footer className="jg-footer">
         <div className="jg-container">
-          <h1>Footer</h1>
+          <div className="jg-footer-wrapper">
+            <h1>Footer</h1>
+          </div>
         </div>
       </footer>
     </>
