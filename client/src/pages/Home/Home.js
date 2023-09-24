@@ -19,7 +19,7 @@ const Home = () => {
             </div>
             <div className="jg-hero-info jg-py">
               <div className="jg-grid">
-                <div className="jg-grid-item jg-grid-order-1 jg-text-left">
+                <div className="jg-grid-item jg-grid-order-2 jg-text-left">
                   <div className="jg-info-item">
                     <h6 className="jg-info-heading jg-heading">Biography</h6>
                     <p className="jg-info-paragraph">
@@ -42,7 +42,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="jg-grid-item jg-grid-order-2">
+                <div className="jg-grid-item jg-grid-order-1">
                   <div className="jg-info-image-wrapper">
                     <div className="jg-info-image jg-pr">
                       <img src={JG} alt="JenilGohel" />
