@@ -1,6 +1,6 @@
 import Layout from "../../layouts/Layout.js";
-import "./Home.css";
 import JG from "../../assets/images/JG.jpg";
+import "./Home.css";
 
 const Home = () => {
   return (
@@ -19,7 +19,7 @@ const Home = () => {
             </div>
             <div className="jg-hero-info jg-py">
               <div className="jg-grid">
-                <div className="jg-grid-item jg-text-left">
+                <div className="jg-grid-item jg-grid-order-1 jg-text-left">
                   <div className="jg-info-item">
                     <h6 className="jg-info-heading jg-heading">Biography</h6>
                     <p className="jg-info-paragraph">
@@ -34,7 +34,7 @@ const Home = () => {
                       Interaction Designer based in Poland.
                     </p>
                   </div>
-                  <div className="jg-info-item">
+                  <div className="jg-info-item jg-info-item-last">
                     <h6 className="jg-info-heading jg-heading">Biography</h6>
                     <p className="jg-info-paragraph">
                       Work for money and design for love! I’m Bruno, an UI/UX
@@ -42,7 +42,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="jg-grid-item">
+                <div className="jg-grid-item jg-grid-order-2">
                   <div className="jg-info-image-wrapper">
                     <div className="jg-info-image jg-pr">
                       <img src={JG} alt="JenilGohel" />
@@ -119,12 +119,14 @@ const Home = () => {
                         </svg>
                       </div>
                     </div>
+                  </div>
+                  <div className="jg-button-wrapper">
                     <a href className="jg-button">
                       portfolio details
                     </a>
                   </div>
                 </div>
-                <div className="jg-grid-item jg-text-right">
+                <div className="jg-grid-item jg-grid-order-3 jg-text-right">
                   <div className="jg-info-item">
                     <h6 className="jg-info-heading jg-heading">Biography</h6>
                     <p className="jg-info-paragraph">
@@ -139,7 +141,7 @@ const Home = () => {
                       Interaction Designer based in Poland.
                     </p>
                   </div>
-                  <div className="jg-info-item">
+                  <div className="jg-info-item jg-info-item-last">
                     <h6 className="jg-info-heading jg-heading">Biography</h6>
                     <p className="jg-info-paragraph">
                       Work for money and design for love! I’m Bruno, an UI/UX
