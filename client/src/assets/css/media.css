@@ -3,6 +3,11 @@
         max-width: 550px;
         height: 650px;
     }
+    .jg-grid-four {
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        grid: auto / 1fr 1fr 1fr;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -12,6 +17,11 @@
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }   
+    .jg-grid-four {
+        grid: auto / 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
     .jg-text-right {
         text-align: left;
     }
@@ -47,7 +57,11 @@
 }
 
 @media (max-width: 768px) {
-    
+    .jg-grid-four {
+        grid: auto / 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
 }
 
 @media (max-width: 425px) {

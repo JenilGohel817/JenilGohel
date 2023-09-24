@@ -95,3 +95,79 @@
 .jg-info-item-last {
     margin-bottom: 1.875rem;
 }
+
+.jg-project-card {
+    width: 100%;
+    height: 400px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: opacity 0.2s ease-in-out 0s;
+}
+
+.jg-project-card-wrap {
+    padding: 10px;
+    border: 2px dashed transparent;
+    transition: border 0.2s ease-in-out 0s;
+}
+
+.jg-project-hover {
+    background-image: linear-gradient(#1961fe00, var(--jg-secondary));
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+
+.jg-project-name {
+    position: absolute;
+    bottom: 67px;
+    left: 30px;
+    background: var(--jg-secondary);
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 0.5rem 0.875rem;
+}
+
+.jg-project-position {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.5rem 0.875rem;
+    background: var(--jg-primary);
+}
+
+.jg-project-card-wrap:hover {
+    border: 2px dashed var(--jg-secondary);
+}
+
+.jg-project-card:hover > .jg-project-hover {
+    opacity: 0;
+}
+
+.jg-project-image-wrap {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-top: 50%;
+}
+
+.jg-project-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.jg-grid-four {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid: auto / 1fr 1fr 1fr 1fr;
+}
