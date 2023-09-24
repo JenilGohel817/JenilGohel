@@ -32,7 +32,7 @@
 
 .jg-info-item {
     width: 100%;
-    max-width: 360px;
+    max-width: 100%;
     background: var(--jg-primary);
     padding: 1.25rem;
     margin-top: 1.875rem;
