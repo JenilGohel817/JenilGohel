@@ -28,6 +28,9 @@
     .jg-info-item-last {
         margin-bottom: 0rem;
     }
+    .jg-info-heading {
+        margin-bottom: 1.875rem;
+    }
     .jg-grid-order-1 {
         order: 1;
     }
