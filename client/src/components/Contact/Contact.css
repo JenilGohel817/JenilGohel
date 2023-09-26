@@ -1,0 +1,23 @@
+.form-grid {
+    display: grid;
+    grid: auto / 1fr 1fr;
+    align-content: center;
+    justify-content: space-between;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    align-items: center;
+    grid-auto-flow: column;
+}
+
+.jg-contact-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    gap: 30px;
+}
+
+.jg-contact-grid-item {
+    width: 50%;
+}

@@ -16,7 +16,7 @@ const Header = () => {
               <div className="jg-header-menu-right">
                 <ul>
                   <li>
-                    <a className="jg-header-link" href>
+                    <a className="jg-header-link" href={"/"}>
                       Home
                     </a>
                   </li>
@@ -26,7 +26,7 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <a className="jg-header-link" href>
+                    <a className="jg-header-link" href={"/Contact"}>
                       Contect Us
                     </a>
                   </li>

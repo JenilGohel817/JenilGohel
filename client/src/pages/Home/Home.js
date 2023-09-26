@@ -46,7 +46,7 @@ const Home = () => {
                   <div className="jg-info-image-wrapper">
                     <div className="jg-info-image jg-pr">
                       <img src={JG} alt="JenilGohel" />
-                      <div className="jg-svg-dot jg-svg-dot-one">
+                      <div className="jg-d-none jg-svg-dot jg-svg-dot-one">
                         <svg
                           width="7"
                           height="7"
@@ -64,7 +64,7 @@ const Home = () => {
                           />
                         </svg>
                       </div>
-                      <div className="jg-svg-dot jg-svg-dot-two">
+                      <div className="jg-d-none jg-svg-dot jg-svg-dot-two">
                         <svg
                           width="7"
                           height="7"
@@ -82,7 +82,7 @@ const Home = () => {
                           />
                         </svg>
                       </div>
-                      <div className="jg-svg-dot jg-svg-dot-three">
+                      <div className="jg-d-none jg-svg-dot jg-svg-dot-three">
                         <svg
                           width="7"
                           height="7"
@@ -100,7 +100,7 @@ const Home = () => {
                           />
                         </svg>
                       </div>
-                      <div className="jg-svg-dot jg-svg-dot-four">
+                      <div className="jg-d-none jg-svg-dot jg-svg-dot-four">
                         <svg
                           width="7"
                           height="7"

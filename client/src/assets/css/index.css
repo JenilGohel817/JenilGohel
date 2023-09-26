@@ -34,6 +34,8 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  height: 100%;
+  width: 100%;
 }
 
 .jg-body {
@@ -119,8 +121,8 @@ p {
 }
 
 .jg-container {
-  max-width: 1600px;
-  padding: 0 25px;
+  max-width: 1610px;
+  padding: 0 30px;
   margin: 0 auto;
   width: 100%;
 }
@@ -140,6 +142,14 @@ p {
 ::-webkit-scrollbar-thumb {
   border-radius: 100px;
   background-color: var(--jg-secondary);
+}
+
+.jg-d-none {
+  display: none;
+}
+
+.jg-d-block {
+  display: block;
 }
 
 .jg-fw100 {
@@ -208,6 +218,22 @@ p {
   color: var(--jg-secondary);
 }
 
+.jg-pt30 {
+  padding-top: 30px;
+}
+
+.jg-pb30 {
+  padding-bottom: 30px;
+}
+
+.jg-mt30 {
+  margin-top: 30px;
+}
+
+.jg-mb30 {
+  margin-bottom: 30px;
+}
+
 .jg-heading {
     letter-spacing: .4px;
     font-size: 1rem;
@@ -251,4 +277,33 @@ p {
 
 .jg-button:hover {
   background: #5288fe;
+}
+
+.form-input {
+  width: 100%;
+  color: var(--jg-white);
+  background-color: var(--jg-box-black);
+  border: none;
+  padding: 1rem;
+  height: 48px;
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.form-input-textarea {
+  height: 112px;
+  resize: none;
+}
+
+.input-label {
+  color: var(--jg-white);
+  padding-bottom: 0.5rem;
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.form-input:focus-visible {
+  outline: none;
 }
