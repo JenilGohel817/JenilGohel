@@ -10,6 +10,10 @@ const Contact = () => {
       <Layout>
         <section className="jg-section">
           <div className="jg-container">
+            <div className="jg-pb30">
+              <h1 className="jg-contact-heading">You’re in good hands</h1>
+              <p>Help us get to know you:</p>
+            </div>
             <div className="jg-contact-grid">
               <div className="jg-contact-grid-item">
                 <form className="jg-contact-form">
