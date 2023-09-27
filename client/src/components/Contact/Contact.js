@@ -62,7 +62,26 @@ const Contact = () => {
                   </div>
                 </form>
               </div>
-              <div className="jg-contact-grid-item"></div>
+              <div className="jg-contact-grid-item jg-contact-grid-item-last">
+                <div className="jg-text-center jg-contact-wrap">
+                  <h3 className="jg-contact-heading">
+                    What do you need help with?
+                  </h3>
+                  <p>Help us get to know you:</p>
+                </div>
+                <div className="jg-project-info-wrap jg-pt30">
+                  <div className="jg-project-info">Javascript</div>
+                  <div className="jg-project-info">Reactjs</div>
+                  <div className="jg-project-info">Nodejs</div>
+                  <div className="jg-project-info">Graphic Design</div>
+                  <div className="jg-project-info">SEO</div>
+                  <div className="jg-project-info">Web Design</div>
+                  <div className="jg-project-info">QA Testing</div>
+                  <div className="jg-project-info">UX/UI</div>
+                  <div className="jg-project-info">Mysql</div>
+                  <div className="jg-project-info">Mongodb</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

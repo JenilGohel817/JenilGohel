@@ -21,3 +21,28 @@
 .jg-contact-grid-item {
     width: 50%;
 }
+
+.jg-project-info {
+    background: transparent;
+    padding: 1.875rem;
+    border: 1px solid #45464a;
+    font-weight: 500;
+    transition: background 0.2s ease-in-out 0s;
+}
+
+.jg-project-info:hover {
+    background: rgba(35,37,46,.75);
+}
+
+.jg-contact-heading {
+    padding-bottom: 10px;
+}
+
+.jg-project-info-wrap {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1.875rem;
+    flex-wrap: wrap;
+}

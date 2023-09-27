@@ -192,6 +192,11 @@ p {
   text-align: right;
 }
 
+.jg-text-center {
+  text-align: center;
+}
+
+
 .jg-w1076 {
   max-width: 1076px;
   margin: 0 auto;
@@ -271,6 +276,7 @@ p {
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
+  border-style: none;
   display: inline-block;
   transition: background 0.2s ease-in-out 0s;
 }
