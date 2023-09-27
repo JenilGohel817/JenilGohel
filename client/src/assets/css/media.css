@@ -25,16 +25,16 @@
     .jg-text-right {
         text-align: left;
     }
-
     .jg-text-center {
         text-align: left;
     }
-
     .jg-hero-info  {
         padding-top: 30px;
         padding-bottom: 0;
     }
-
+    .jg-about-flex {
+        flex-flow: column;
+    }
     .jg-info-item {
         max-width: 100%;
     }
@@ -108,7 +108,9 @@
 }
 
 @media (max-width: 425px) {
-    
+    .jg-about-box-social-links ul {
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 375px) {
