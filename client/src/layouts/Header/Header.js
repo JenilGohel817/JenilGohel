@@ -9,8 +9,7 @@ const Header = () => {
             <div className="jg-header-menu jg-dflex">
               <div className="jg-header-menu-left">
                 <a href={"/"} className="jg-logo">
-                  J<span className="jg-span">E</span>N
-                  <span className="jg-span">I</span>L
+                  <span className="jg-span">JG</span>
                 </a>
               </div>
               <div className="jg-header-menu-right">
