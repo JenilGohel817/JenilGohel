@@ -1,8 +1,6 @@
 import React from "react";
 import "./Contact.css";
 import Layout from "../../layouts/Layout.js";
-import Lottie from "lottie-react";
-import contact from "../../assets/images/contact.json";
 
 const Contact = () => {
   return (
@@ -10,12 +8,12 @@ const Contact = () => {
       <Layout>
         <section className="jg-section">
           <div className="jg-container">
-            <div className="jg-pb30">
-              <h1 className="jg-contact-heading">You’re in good hands</h1>
-              <p>Help us get to know you:</p>
-            </div>
             <div className="jg-contact-grid">
               <div className="jg-contact-grid-item">
+                <div className="jg-pb30">
+                  <h1 className="jg-contact-heading">You’re in good hands</h1>
+                  <p>Help us get to know you:</p>
+                </div>
                 <form className="jg-contact-form">
                   <div className="form-grid">
                     <div className="form-grid-item">
@@ -67,9 +65,6 @@ const Contact = () => {
                     </button>
                   </div>
                 </form>
-              </div>
-              <div className="jg-contact-grid-item jg-contact-grid-item-last">
-                <Lottie animationData={contact} loop={true} />
               </div>
             </div>
           </div>
