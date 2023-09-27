@@ -31,8 +31,10 @@
     }
 
     .jg-hero-info  {
-        padding: 30px 0;
+        padding-top: 30px;
+        padding-bottom: 0;
     }
+
     .jg-info-item {
         max-width: 100%;
     }
@@ -58,7 +60,10 @@
 }
 
 @media (max-width: 991px) {
-    
+    section, .jg-section {
+        padding: 3rem 0;
+      }
+      
     .jg-contact-grid {
         flex-wrap: wrap;
         gap: 0;
@@ -75,6 +80,10 @@
 }
 
 @media (max-width: 768px) {
+    section, .jg-section {
+        padding: 1.875rem 0;
+      }
+      
     .jg-grid-four {
         grid: auto / 1fr;
         grid-column-gap: 10px;
