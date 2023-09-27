@@ -25,6 +25,8 @@
 .jg-project-info {
     background: transparent;
     padding: 1.875rem;
+    width: 100%;
+    text-align: center;
     border: 1px solid #45464a;
     font-weight: 500;
     transition: background 0.2s ease-in-out 0s;
@@ -39,10 +41,11 @@
 }
 
 .jg-project-info-wrap {
-    display: flex;
-    width: 100%;
-    align-items: center;
+    display: grid;
+    grid: auto / 1fr 1fr 1fr;
+    align-content: center;
     justify-content: center;
-    gap: 1.875rem;
-    flex-wrap: wrap;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    align-items: center;
 }
