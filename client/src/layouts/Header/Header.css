@@ -10,6 +10,10 @@
     color: var(--jg-primary);
 }
 
+.jg-header-menu {
+    position: relative;
+}
+
 .jg-header-menu-right {
     margin-left: auto;
 }
@@ -21,6 +25,7 @@
     margin-left: 5px;
     border-radius: 0px;
     margin-right: 5px;
+    display: inline-block;
     padding: 8px 30px;
     transition: background .2s ease-in-out 0s;
     position: relative;

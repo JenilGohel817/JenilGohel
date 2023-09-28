@@ -10,9 +10,11 @@ const Contact = () => {
           <div className="jg-container">
             <div className="jg-contact-grid">
               <div className="jg-contact-grid-item">
-                <div className="jg-pb30">
-                  <h1 className="jg-contact-heading">You’re in good hands</h1>
-                  <p>Help us get to know you:</p>
+                <div className="jg-heading-wrap">
+                  <div className="jg-heading-subtitle">
+                    You’re in good hands
+                  </div>
+                  <h2>Help us get to know you:</h2>
                 </div>
                 <form className="jg-contact-form">
                   <div className="form-grid">
@@ -71,13 +73,13 @@ const Contact = () => {
         </section>
         <section className="jg-section">
           <div className="jg-container">
-            <div className="jg-text-center jg-contact-wrap">
-              <h3 className="jg-contact-heading">
+            <div className="jg-heading-wrap">
+              <div className="jg-heading-subtitle">
                 What do you need help with?
-              </h3>
-              <p>Help us get to know you:</p>
+              </div>
+              <h2>Help us get to know you:</h2>
             </div>
-            <div className="jg-project-info-wrap jg-pt30">
+            <div className="jg-project-info-wrap">
               <div className="jg-project-info">Javascript</div>
               <div className="jg-project-info">Reactjs</div>
               <div className="jg-project-info">Nodejs</div>

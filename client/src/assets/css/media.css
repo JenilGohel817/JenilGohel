@@ -111,6 +111,9 @@
     .jg-about-box-social-links ul {
         flex-wrap: wrap;
     }
+    .jg-skills-wrap {
+        grid: auto / 1fr;
+    }
 }
 
 @media (max-width: 375px) {

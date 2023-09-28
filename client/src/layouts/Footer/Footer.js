@@ -6,7 +6,18 @@ const Footer = () => {
       <footer className="jg-footer">
         <div className="jg-container">
           <div className="jg-footer-wrapper">
-            <h1>JG</h1>
+            <a className="jg-header-link" href={"/"}>
+              Home
+            </a>
+            <a className="jg-header-link" href={"/Project"}>
+              Projects
+            </a>
+            <a className="jg-header-link" href={"/ContactUs"}>
+              Contect Us
+            </a>
+            <a className="jg-header-link" href={"/AboutUs"}>
+              About Us
+            </a>
           </div>
         </div>
       </footer>

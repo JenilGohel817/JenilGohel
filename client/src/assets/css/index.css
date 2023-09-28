@@ -196,6 +196,9 @@ p {
   text-align: center;
 }
 
+.jg-w100 {
+  width: 100%;
+}
 
 .jg-w1076 {
   max-width: 1076px;
@@ -312,4 +315,20 @@ p {
 
 .form-input:focus-visible {
   outline: none;
+}
+
+.jg-heading-wrap {
+  padding-bottom: 1.875rem;
+}
+
+.jg-heading-subtitle {
+  letter-spacing: .4px;
+  font-size: 1rem;
+  color: var(--jg-white);
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border: 1px solid var(--jg-secondary);
 }

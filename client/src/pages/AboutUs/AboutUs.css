@@ -2,7 +2,7 @@
     display: flex;
     flex-flow: row;
     width: 100%;
-    gap: 30px;
+    gap: 1.875rem;
     align-items: flex-start;
     justify-content: center;
     align-content: center;
@@ -71,4 +71,76 @@
     font-size: 20px;
     background: var(--jg-secondary);
     transition: .3s;
+}
+
+.jg-brief-info-para {
+    padding-bottom: 0.5rem;
+}
+
+.jg-brief-info-para-last {
+    padding-bottom: 0;
+}
+
+.jg-about-heading {
+    padding: 3rem 0;
+}
+
+.jg-about-heading-first {
+    padding-top: 0;
+}
+
+.jg-experience-wrap {
+    padding-bottom: 1.875rem;
+}
+
+.jg-experience-wrap-last {
+    padding-bottom: 0;
+}
+
+.jg-experience-year {
+    color: var(--jg-light-gray);
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.jg-experience-designation {
+    color: var(--jg-secondary);
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.jg-experience-company {
+    color: var(--jg-white);
+    font-weight: 400;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.jg-skills-wrap {
+    display: grid;
+    grid: auto / 1fr 1fr;
+    align-content: center;
+    grid-column-gap: 1.875rem;
+    grid-row-gap: 1.875rem;
+    align-items: center;
+}
+
+.jg-skills-name {
+    font-size: 1.5rem;
+    color: var(--jg-white);
+    padding: 0.5rem 0;
+    font-weight: 500; 
+}
+
+.jg-skills-percent {
+    font-weight: 400;
+    color: var(--jg-light-gray);
+    font-size: 1rem;
+}
+
+.jg-about-box-btn {
+    padding-top: 1.875rem;
+    text-align: center;
 }
