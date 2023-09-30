@@ -47,7 +47,7 @@
     overflow: scroll;
     padding: 1.875rem 1.875rem;
     padding-bottom: 9rem;
-    top: 100%;
+    top: 88px;
     width: 100vw;
     height: 100vh;
     background: var(--jg-primary);
