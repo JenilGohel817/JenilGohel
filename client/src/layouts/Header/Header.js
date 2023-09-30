@@ -3,14 +3,25 @@ import "./Header.css";
 const Header = () => {
   const MenuClick = () => {
     const jgIcon = document.querySelector(".jg-header-menu-right");
+
+    const jgLineOne = document.querySelector(".jg-header-menu-icon-line-one");
+    const jgLineThree = document.querySelector(
+      ".jg-header-menu-icon-line-three"
+    );
+
     const jgHeaderRight = document.querySelector(".jg-header-menu-right");
     jgIcon.classList.toggle("jg-header-menu-mobile");
+
+    jgLineOne.classList.toggle("jg-d-none");
+    jgLineThree.classList.toggle("jg-d-none");
 
     const body = document.querySelector("body");
     body.classList.toggle("jg-overflow-hidden");
 
     if (!jgHeaderRight.classList.contains("jg-header-menu-mobile")) {
       body.classList.remove("jg-overflow-hidden");
+      jgLineOne.classList.remove("jg-d-none");
+      jgLineThree.classList.remove("jg-d-none");
     }
   };
 

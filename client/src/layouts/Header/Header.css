@@ -57,6 +57,7 @@
   
   .jg-header-menu-icon {
     display: none;
+    transition: display 0.ms ease-in-out 0s;
     margin-left: auto;
     position: relative;
     height: 50px;
