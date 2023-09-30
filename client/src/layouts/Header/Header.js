@@ -3,7 +3,15 @@ import "./Header.css";
 const Header = () => {
   const MenuClick = () => {
     const jgIcon = document.querySelector(".jg-header-menu-right");
+    const jgHeaderRight = document.querySelector(".jg-header-menu-right");
     jgIcon.classList.toggle("jg-header-menu-mobile");
+
+    const body = document.querySelector("body");
+    body.classList.toggle("jg-overflow-hidden");
+
+    if (!jgHeaderRight.classList.contains("jg-header-menu-mobile")) {
+      body.classList.remove("jg-overflow-hidden");
+    }
   };
 
   return (

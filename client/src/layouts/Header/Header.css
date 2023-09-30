@@ -42,9 +42,9 @@
     cursor: pointer;
 }
 
-
 .jg-header-menu-mobile {
     position: absolute;
+    overflow: scroll;
     padding: 1.875rem 1.875rem;
     top: 100%;
     width: 100vw;
