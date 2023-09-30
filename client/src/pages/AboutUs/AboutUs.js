@@ -1,5 +1,9 @@
 import React from "react";
 import JG from "../../assets/images/JG.jpg";
+import linkedin from "../../assets/images/linkedin.png";
+import github from "../../assets/images/github.png";
+import instagram from "../../assets/images/instagram.png";
+import twitter from "../../assets/images/twitter.png";
 import Layout from "../../layouts/Layout";
 import "./AboutUs.css";
 
@@ -31,16 +35,34 @@ const AboutUs = () => {
                     <div className="jg-about-box-social-links">
                       <ul>
                         <li>
-                          <a href>J</a>
+                          <a
+                            href="https://github.com/JenilGohel817"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="jg-soical-media-link"
+                          >
+                            <img alt="social-media" src={github} />
+                          </a>
                         </li>
                         <li>
-                          <a href>E</a>
+                          <a
+                            href="https://www.linkedin.com/in/jenilgohel817/"
+                            target="_blank"
+                            className="jg-soical-media-link"
+                            rel="noopener noreferrer"
+                          >
+                            <img alt="social-media" src={linkedin} />
+                          </a>
                         </li>
                         <li>
-                          <a href>N</a>
+                          <a href className="jg-soical-media-link">
+                            <img alt="social-media" src={twitter} />
+                          </a>
                         </li>
                         <li>
-                          <a href>N</a>
+                          <a href className="jg-soical-media-link">
+                            <img alt="social-media" src={instagram} />
+                          </a>
                         </li>
                       </ul>
                     </div>
