@@ -70,7 +70,8 @@
     height: 2px;
     background: var(--jg-primary);
     z-index: 1;
-    left: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   
   .jg-header-menu-icon-line-one {
