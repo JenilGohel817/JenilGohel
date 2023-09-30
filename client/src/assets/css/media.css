@@ -60,10 +60,27 @@
 }
 
 @media (max-width: 991px) {
+    .jg-header {
+        padding: 1rem 0;
+    }
     section, .jg-section {
         padding: 3rem 0;
       }
+
+      .jg-header-menu-icon {
+        display: block;
+      }
       
+      .jg-header-menu-right ul li {
+        display: block;
+        padding-bottom: 1.875rem;
+        padding-top: 0;
+    }
+    .jg-header-link {
+        width: 100%;
+        margin: 0;
+        padding: 1.875rem;
+    }
     .jg-contact-grid {
         flex-wrap: wrap;
         gap: 0;

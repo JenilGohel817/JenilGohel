@@ -226,6 +226,10 @@ p {
   color: var(--jg-secondary);
 }
 
+.jg-overflow-hidden {
+  overflow: hidden;
+}
+
 .jg-pt30 {
   padding-top: 30px;
 }

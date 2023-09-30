@@ -5,7 +5,7 @@ const Footer = () => {
     <>
       <footer className="jg-footer">
         <div className="jg-container">
-          <div className="jg-footer-wrapper">
+          <div className="jg-footer-wrapper jg-d-none">
             <a className="jg-header-link" href={"/"}>
               Home
             </a>
@@ -19,6 +19,7 @@ const Footer = () => {
               About Us
             </a>
           </div>
+          <h2>JG</h2>
         </div>
       </footer>
     </>

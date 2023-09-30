@@ -1,12 +1,11 @@
 .jg-header {
     background: var(--jg-white);
-    padding: 1rem 0;
     text-align: center;
     color: var(--jg-primary);
 }
 
 .jg-logo {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: var(--jg-primary);
 }
 
@@ -34,3 +33,54 @@
 .jg-header-link:hover {
     background: #5288fe;
 }
+
+.jg-header-menu-right ul li {
+    padding: 1rem 0;
+}
+
+.jg-header-menu-icon {
+    cursor: pointer;
+}
+
+
+.jg-header-menu-mobile {
+    position: absolute;
+    padding: 1.875rem 1.875rem;
+    top: 100%;
+    width: 100vw;
+    height: 100vh;
+    background: var(--jg-primary);
+    z-index: 1;
+    display: block !important;
+  }
+  
+  .jg-header-menu-icon {
+    display: none;
+    margin-left: auto;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background: transparent;
+    border: 2px dashed var(--jg-secondary);
+  }
+  
+  .jg-header-menu-icon-line {
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background: var(--jg-primary);
+    z-index: 1;
+    left: 10%;
+  }
+  
+  .jg-header-menu-icon-line-one {
+    top: 25%;
+  }
+  
+  .jg-header-menu-icon-line-two {
+    top: 50%;
+  }
+  
+  .jg-header-menu-icon-line-three {
+    top: 75%;
+  }
