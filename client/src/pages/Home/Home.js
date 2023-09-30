@@ -121,7 +121,7 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="jg-button-wrapper">
-                    <a href className="jg-button">
+                    <a href={"/AboutUs"} className="jg-button">
                       portfolio details
                     </a>
                   </div>
