@@ -55,12 +55,22 @@ const AboutUs = () => {
                           </a>
                         </li>
                         <li>
-                          <a href className="jg-soical-media-link">
+                          <a
+                            target="_blank"
+                            href="https://twitter.com/JenilGohel817?t=X2acBvdcELd6m7RU41UQOA&s=09"
+                            rel="noopener noreferrer"
+                            className="jg-soical-media-link"
+                          >
                             <img alt="social-media" src={twitter} />
                           </a>
                         </li>
                         <li>
-                          <a href className="jg-soical-media-link">
+                          <a
+                            href="https://instagram.com/jenilgohel817?igshid=MzNlNGNkZWQ4Mg=="
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="jg-soical-media-link"
+                          >
                             <img alt="social-media" src={instagram} />
                           </a>
                         </li>
