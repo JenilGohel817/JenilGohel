@@ -34,6 +34,7 @@
     }
     .jg-about-flex {
         flex-flow: column;
+        gap: 3rem;
     }
     .jg-info-item {
         max-width: 100%;
