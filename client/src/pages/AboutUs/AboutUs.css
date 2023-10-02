@@ -143,3 +143,16 @@
     padding-top: 1.875rem;
     text-align: center;
 }
+
+.jg-experience-info-list {
+    color: var(--jg-light-gray);
+    padding-left: 1.875rem;
+}
+
+.jg-experience-info-list ul {
+    list-style: disc;
+}
+
+.jg-experience-info-list ul li {
+    display: list-item;
+}

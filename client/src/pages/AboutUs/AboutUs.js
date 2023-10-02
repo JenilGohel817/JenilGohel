@@ -79,16 +79,16 @@ const AboutUs = () => {
                   </h2>
                   <div className="jg-brief-info">
                     <p className="jg-brief-info-para">
-                      With over a year worth of expertise provide amazing
-                      customer experiences, professional and creative Software
-                      developers
+                      Professional and creative Software developers with more
+                      than one and a half years of experience in providing
+                      exceptional client experiences
                     </p>
                     <p className="jg-brief-info-para jg-brief-info-para-last">
-                      with a passion Ability to work on technologies like HTML5,
-                      CSS3, JavaScript, jQuery, AJAX, Jinja2 and knowledgeable
-                      in the Python language, the Django framework, and the
-                      React library. Knowledge of Relational Database Systems
-                      such MySQL, PostgreSQL
+                      The ability to work with technologies including HTML5,
+                      CSS3, JavaScript, jQuery, AJAX, Redux, and Jinja2 as well
+                      as knowledge of the Python and JavaScript programming
+                      languages. being familiar with relational database systems
+                      like MySQL, PostgreSQL, and mongodb
                     </p>
                   </div>
                   <h2 className="jg-about-heading">EXPERIENCE</h2>
@@ -101,13 +101,23 @@ const AboutUs = () => {
                         Full Stack Developer
                       </div>
                       <div className="jg-experience-company">ZealousWeb</div>
-                      <p className="jg-experience-info">
-                        Front-End: React, Redux, HTML5, CSS3, JavaScript (ES6+)
-                        Back-End: Node.js, Express.js Database: MongoDB,
-                        Mongoose RESTful API Development Responsive Web Design
-                        Version Control: Git, GitHub/GitLab Skills: Redux ·
-                        Node.js · React.js · JavaScript
-                      </p>
+                      <div className="jg-experience-info-list">
+                        <ul>
+                          <li>
+                            Front-End: React, Redux, HTML5, CSS3, JavaScript
+                            (ES6+)
+                          </li>
+                          <li>
+                            Back-End: Node.js, Express.js Database: MongoDB,
+                            Mongoose
+                          </li>
+                          <li>RESTful API Development Responsive Web</li>
+                          <li>Design Version Control: Git, GitHub/GitLab</li>
+                          <li>
+                            Skills: Redux · Node.js · React.js · JavaScript
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                     <div className="jg-experience-wrap">
                       <div className="jg-experience-year">
@@ -119,10 +129,15 @@ const AboutUs = () => {
                       <div className="jg-experience-company">
                         Evol Technobits Digital Pvt. Ltd.
                       </div>
-                      <p className="jg-experience-info">
-                        Skills: C++ · Data Structures · Algorithms · C
-                        (Programming Language)
-                      </p>
+                      <div className="jg-experience-info-list">
+                        <ul>
+                          <li>ReactJs</li>
+                          <li>NodeJs</li>
+                          <li>C++</li>
+                          <li>Data Structures</li>
+                          <li>Algorithms</li>
+                        </ul>
+                      </div>
                     </div>
                     <div className="jg-experience-wrap">
                       <div className="jg-experience-year">
@@ -134,9 +149,12 @@ const AboutUs = () => {
                       <div className="jg-experience-company">
                         Evol Technobits Digital Pvt. Ltd.
                       </div>
-                      <p className="jg-experience-info">
-                        Skills: Team Leadership · Team Building · Team
-                        Management
+                      <p className="jg-experience-info-list">
+                        <ul>
+                          <li>Team Leadership</li>
+                          <li>Team Building</li>
+                          <li>Team Management</li>
+                        </ul>
                       </p>
                     </div>
                     <div className="jg-experience-wrap">
@@ -149,11 +167,17 @@ const AboutUs = () => {
                       <div className="jg-experience-company">
                         Evol Technobits Digital Pvt. Ltd.
                       </div>
-                      <p className="jg-experience-info">
-                        Skills: Front-End Development · React.js · Web
-                        Development · Web Design · Responsive Web Design ·
-                        JavaScript · Django · jQuery
-                      </p>
+                      <div className="jg-experience-info-list">
+                        <ul>
+                          <li>Front-End Development</li>
+                          <li>React.js</li>
+                          <li>Web Development</li>
+                          <li>Web Design</li>
+                          <li>JavaScript</li>
+                          <li>Django</li>
+                          <li>jQuery</li>
+                        </ul>
+                      </div>
                     </div>
                     <div className="jg-experience-wrap  jg-experience-wrap-last">
                       <div className="jg-experience-year">
@@ -165,11 +189,15 @@ const AboutUs = () => {
                       <div className="jg-experience-company">
                         Evol Technobits Digital Pvt. Ltd.
                       </div>
-                      <p className="jg-experience-info">
-                        Skills: Search Engine Optimization (SEO) · System
-                        Testing · Figma · Adobe Photoshop · Web Design ·
-                        Responsive Web Design · Problem Solving
-                      </p>
+                      <div className="jg-experience-info-list">
+                        <ul>
+                          <li>Search Engine Optimization (SEO)</li>
+                          <li>System Testing</li>
+                          <li>Figma · Adobe Photoshop</li>
+                          <li>Responsive Web Design</li>
+                          <li>Problem Solving</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   <h2 className="jg-about-heading">AWARDS</h2>
@@ -278,7 +306,7 @@ const AboutUs = () => {
                         DEC 2021 - OCT 2022
                       </div>
                       <div className="jg-experience-designation">
-                        complete 25+ projects
+                        complete 35+ projects
                       </div>
                       <div className="jg-experience-company">
                         ReactJs, NodeJs, Django, Python, MySql, MongoDB
