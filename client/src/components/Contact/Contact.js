@@ -9,7 +9,8 @@ const Contact = () => {
   const [Email, setEmail] = useState("");
   const [ProjectDetails, setProjectDetails] = useState("");
 
-  const contactSubmit = async () => {
+  const contactSubmit = async (e) => {
+    e.preventdefault();
     try {
       const contactForm = new FormData();
       contactForm.append("FirstName", FirstName);
