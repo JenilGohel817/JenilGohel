@@ -19,7 +19,10 @@ const Contact = () => {
       contactForm.append("ProjectDetails", ProjectDetails);
 
       axios
-        .post(`${process.env.API}/contactCreate`, contactForm)
+        .post(
+          `https://jenilgohel-api.onrender.com/api/v1/contactCreate`,
+          contactForm
+        )
         .then((response) => {
           console.log(response);
         })
