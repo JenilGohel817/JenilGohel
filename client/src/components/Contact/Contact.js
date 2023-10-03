@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
+import axios from "axios";
 import Layout from "../../layouts/Layout.js";
 
 const Contact = () => {
+  const [FirstName, setFirstName] = useState("");
+  const [LastName, setLastName] = useState("");
+  const [Email, setEmail] = useState("");
+  const [ProjectDetails, setProjectDetails] = useState("");
+
+  const contactSubmit = async () => {
+    try {
+      const contactForm = new FormData();
+      contactForm.append("FirstName", FirstName);
+      contactForm.append("LastName", LastName);
+      contactForm.append("Email", Email);
+      contactForm.append("ProjectDetails", ProjectDetails);
+
+      axios
+        .post(`${process.env.API}/createContact`, contactForm)
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (error) {
+      if (error) throw error;
+    }
+  };
+
   return (
     <>
       <Layout>
@@ -16,7 +43,7 @@ const Contact = () => {
                   </div>
                   <h2>Help us get to know you:</h2>
                 </div>
-                <form className="jg-contact-form">
+                <form className="jg-contact-form" onSubmit={contactSubmit}>
                   <div className="form-grid">
                     <div className="form-grid-item">
                       <label for="first" className="input-label">
@@ -25,6 +52,9 @@ const Contact = () => {
                       <input
                         className="form-input"
                         type="text"
+                        onChange={(e) => {
+                          setFirstName(e.target.value);
+                        }}
                         placeholder="First Name"
                         required
                       />
@@ -36,6 +66,9 @@ const Contact = () => {
                       <input
                         className="form-input"
                         type="text"
+                        onChange={(e) => {
+                          setLastName(e.target.value);
+                        }}
                         placeholder="Last Name"
                         required
                       />
@@ -48,6 +81,9 @@ const Contact = () => {
                     <input
                       className="form-input"
                       type="email"
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                      }}
                       placeholder="Email"
                       required
                     />
@@ -57,6 +93,9 @@ const Contact = () => {
                       Project details
                     </label>
                     <textarea
+                      onChange={(e) => {
+                        setProjectDetails(e.target.value);
+                      }}
                       className="form-input form-input-textarea"
                       placeholder="Enter any project specific details..."
                     />
