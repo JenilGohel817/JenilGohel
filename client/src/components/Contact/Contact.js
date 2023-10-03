@@ -19,7 +19,7 @@ const Contact = () => {
       contactForm.append("ProjectDetails", ProjectDetails);
 
       axios
-        .post(`${process.env.API}/createContact`, contactForm)
+        .post(`${process.env.API}/contactCreate`, contactForm)
         .then((response) => {
           console.log(response);
         })
