@@ -16,4 +16,12 @@ const dbConnect = mysql2.createConnection({
   queueLimit: 0,
 });
 
+dbConnect.connect(function (err) {
+  if (err) {
+    console.log(`connectionRequest Failed ${err.stack}`);
+  } else {
+    console.log(`DB connectionRequest Successful ${dbConnect.threadId}`);
+  }
+});
+
 export default dbConnect;
