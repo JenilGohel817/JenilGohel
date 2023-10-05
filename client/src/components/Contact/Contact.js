@@ -22,7 +22,7 @@ const Contact = () => {
       };
 
       await axios
-        .post(`${process.env.JGAPI}/contactCreate`, contactForm)
+        .post(`${process.env.REACT_APP_JGAPI_V1}/contactCreate`, contactForm)
         .then((data) => {
           toast.success(data.data.message);
         })
