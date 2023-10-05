@@ -5,6 +5,7 @@ import Layout from "../../layouts/Layout.js";
 import { toast } from "react-toastify";
 
 const Contact = () => {
+  const [Form, setForm] = useState(false);
   const [FirstName, setFirstName] = useState("");
   const [LastName, setLastName] = useState("");
   const [Email, setEmail] = useState("");
@@ -20,15 +21,18 @@ const Contact = () => {
         Email: Email,
         ProjectDetail: ProjectDetail,
       };
+      setForm(true);
 
       await axios
-        .post(`${process.env.REACT_APP_JGAPI_V1}/contactCreate`, contactForm)
+        .post(`http://localhost:8080/api/v1/contactCreate`, contactForm)
         .then((data) => {
           toast.success(data.data.message);
         })
         .catch((error) => {
           toast.error(error.message);
         });
+
+      setForm(false);
     } catch (error) {
       if (error) throw error;
       toast.error(error);
@@ -116,7 +120,7 @@ const Contact = () => {
                   </div>
                   <div className="jg-pt30 jg-text-right">
                     <button type="submit" className="jg-button">
-                      Send
+                      {Form ? "Sending..." : "Send"}
                     </button>
                   </div>
                 </form>
