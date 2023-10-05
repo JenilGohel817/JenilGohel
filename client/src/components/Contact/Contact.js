@@ -31,7 +31,7 @@ const Contact = () => {
         });
     } catch (error) {
       if (error) throw error;
-      console.log(error);
+      toast.error(error);
     }
   };
 
