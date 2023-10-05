@@ -2,32 +2,36 @@ import React, { useState } from "react";
 import "./Contact.css";
 import axios from "axios";
 import Layout from "../../layouts/Layout.js";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [FirstName, setFirstName] = useState("");
   const [LastName, setLastName] = useState("");
   const [Email, setEmail] = useState("");
-  const [ProjectDetails, setProjectDetails] = useState("");
+  const [ProjectDetail, setProjectDetail] = useState("");
 
   const contactSubmit = async (e) => {
-    e.preventdefault();
-    try {
-      const contactForm = new FormData();
-      contactForm.append("FirstName", FirstName);
-      contactForm.append("LastName", LastName);
-      contactForm.append("Email", Email);
-      contactForm.append("ProjectDetails", ProjectDetails);
+    e.preventDefault();
 
-      axios
-        .post(`${process.env.API}/contactCreate`, contactForm)
-        .then((response) => {
-          console.log(response);
+    try {
+      const contactForm = {
+        FirstName: FirstName,
+        LastName: LastName,
+        Email: Email,
+        ProjectDetail: ProjectDetail,
+      };
+
+      await axios
+        .post(`${process.env.JGAPI}/contactCreate`, contactForm)
+        .then((data) => {
+          toast.success(data.data.message);
         })
         .catch((error) => {
-          console.log(error);
+          toast.error(error.message);
         });
     } catch (error) {
       if (error) throw error;
+      console.log(error);
     }
   };
 
@@ -44,15 +48,21 @@ const Contact = () => {
                   </div>
                   <h2>Help us get to know you:</h2>
                 </div>
-                <form className="jg-contact-form" onSubmit={contactSubmit}>
+                <form
+                  className="jg-contact-form"
+                  method="post"
+                  encType="multipart/form-data"
+                  onSubmit={contactSubmit}
+                >
                   <div className="form-grid">
                     <div className="form-grid-item">
-                      <label for="first" className="input-label">
+                      <label htmlFor="FirstName" className="input-label">
                         First Name *
                       </label>
                       <input
                         className="form-input"
                         type="text"
+                        name="FirstName"
                         onChange={(e) => {
                           setFirstName(e.target.value);
                         }}
@@ -61,12 +71,13 @@ const Contact = () => {
                       />
                     </div>
                     <div className="form-grid-item">
-                      <label for="last" className="input-label">
+                      <label htmlFor="LastName" className="input-label">
                         Last Name *
                       </label>
                       <input
                         className="form-input"
                         type="text"
+                        name="LastName"
                         onChange={(e) => {
                           setLastName(e.target.value);
                         }}
@@ -76,11 +87,12 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="form-grid-item jg-pt30">
-                    <label for="email" className="input-label">
+                    <label htmlFor="Email" className="input-label">
                       Email *
                     </label>
                     <input
                       className="form-input"
+                      name="Email"
                       type="email"
                       onChange={(e) => {
                         setEmail(e.target.value);
@@ -90,13 +102,14 @@ const Contact = () => {
                     />
                   </div>
                   <div className="form-grid-item jg-pt30">
-                    <label for="project" className="input-label">
+                    <label htmlFor="ProjectDetail" className="input-label">
                       Project details
                     </label>
                     <textarea
                       onChange={(e) => {
-                        setProjectDetails(e.target.value);
+                        setProjectDetail(e.target.value);
                       }}
+                      name="ProjectDetail"
                       className="form-input form-input-textarea"
                       placeholder="Enter any project specific details..."
                     />

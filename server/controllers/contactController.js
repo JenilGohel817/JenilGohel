@@ -24,21 +24,22 @@ const contactCreate = async (req, res) => {
           dbConnect.query(sql, [values], function (err, results) {
             if (err) console.log(err);
             return res.status(200).send({
-              message: "contact added!",
+              message: "We will get in touch with you soon",
+              success: true,
               results,
             });
           });
         }
       });
     } else {
-      return res.status(404).send({
-        message: "Error In Create",
+      return res.status(404).json({
+        message: "All fields are required",
         success: false,
       });
     }
   } catch (error) {
     return res.status(404).send({
-      message: "Error In Create",
+      message: "Form error",
       success: false,
     });
   }
@@ -50,14 +51,15 @@ const contactFind = async (req, res) => {
     dbConnect.query(sql, function (err, results) {
       if (err) console.log(err);
       res.status(200).send({
-        message: "Contact fetch successfully!",
+        message: "Successful contact fetching",
+        success: true,
         results,
       });
       console.log(results);
     });
   } catch (error) {
     return res.status(404).send({
-      message: "Error In Create",
+      message: "Form error",
       success: false,
     });
   }
