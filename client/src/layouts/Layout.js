@@ -18,17 +18,16 @@ const Layout = ({ children }) => {
   return (
     <>
       {loading ? (
-        <>
-          <Header />
-          {children}
-          <Footer />
-          <ToastContainer />
-        </>
+        <></>
       ) : (
         <>
           <PreLoader />
         </>
       )}
+      <Header />
+      {children}
+      <Footer />
+      <ToastContainer />
     </>
   );
 };
