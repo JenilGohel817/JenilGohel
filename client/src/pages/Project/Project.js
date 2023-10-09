@@ -15,7 +15,7 @@ const Project = () => {
             </div>
             <div className="jg-grid jg-grid-four">
               <div className="jg-project-card-wrap">
-                <a href className="jg-project-card">
+                <a href={"/"} className="jg-project-card">
                   <div className="jg-project-image-wrap">
                     <img
                       className="jg-project-image"
@@ -29,7 +29,7 @@ const Project = () => {
                 </a>
               </div>
               <div className="jg-project-card-wrap">
-                <a href className="jg-project-card">
+                <a href={"/"} className="jg-project-card">
                   <div className="jg-project-image-wrap">
                     <img
                       className="jg-project-image"
@@ -43,7 +43,7 @@ const Project = () => {
                 </a>
               </div>
               <div className="jg-project-card-wrap">
-                <a href className="jg-project-card">
+                <a href={"/"} className="jg-project-card">
                   <div className="jg-project-image-wrap">
                     <img
                       className="jg-project-image"
@@ -57,7 +57,7 @@ const Project = () => {
                 </a>
               </div>
               <div className="jg-project-card-wrap">
-                <a href className="jg-project-card">
+                <a href={"/"} className="jg-project-card">
                   <div className="jg-project-image-wrap">
                     <img
                       className="jg-project-image"
@@ -71,7 +71,7 @@ const Project = () => {
                 </a>
               </div>
               <div className="jg-project-card-wrap">
-                <a href className="jg-project-card">
+                <a href={"/"} className="jg-project-card">
                   <div className="jg-project-image-wrap">
                     <img
                       className="jg-project-image"
@@ -85,7 +85,7 @@ const Project = () => {
                 </a>
               </div>
               <div className="jg-project-card-wrap">
-                <a href className="jg-project-card">
+                <a href={"/"} className="jg-project-card">
                   <div className="jg-project-image-wrap">
                     <img
                       className="jg-project-image"
@@ -99,7 +99,7 @@ const Project = () => {
                 </a>
               </div>
               <div className="jg-project-card-wrap">
-                <a href className="jg-project-card">
+                <a href={"/"} className="jg-project-card">
                   <div className="jg-project-image-wrap">
                     <img
                       className="jg-project-image"
@@ -113,7 +113,7 @@ const Project = () => {
                 </a>
               </div>
               <div className="jg-project-card-wrap">
-                <a href className="jg-project-card">
+                <a href={"/"} className="jg-project-card">
                   <div className="jg-project-image-wrap">
                     <img
                       className="jg-project-image"

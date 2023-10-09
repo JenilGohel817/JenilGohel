@@ -97,6 +97,7 @@
 
 .jg-project-card {
     width: 100%;
+    color: var(--jg-white);
     height: 400px;
     display: block;
     position: relative;
