@@ -16,14 +16,14 @@ const projectCreate = async (req, res) => {
         console.log(error);
       }
       return res.status(200).send({
-        message: "project created!",
+        message: "Project created successfully",
         success: true,
         results,
       });
     });
   } catch (error) {
     return res.status(404).send({
-      message: "project getting error",
+      message: "Error project",
       success: false,
       error,
     });
@@ -39,14 +39,14 @@ const projectGet = async (req, res) => {
         console.log(error);
       }
       return res.status(200).send({
-        message: "project fetched!",
+        message: "Project fetched successfully",
         success: true,
         results,
       });
     });
   } catch (error) {
     return res.status(404).send({
-      message: "Error fetch project",
+      message: "Error fetching",
       success: false,
       error,
     });
@@ -71,7 +71,7 @@ const projectGetSingle = async (req, res) => {
     });
   } catch (error) {
     return res.status(404).send({
-      message: "Project",
+      message: "Error project",
       success: false,
       error,
     });
@@ -99,7 +99,7 @@ const projectUpdate = async (req, res) => {
           console.log(error);
         }
         return res.status(200).send({
-          message: "Project updated successfully.",
+          message: "Project successfully updated",
           success: true,
           results,
         });
@@ -126,14 +126,14 @@ const projectDelete = async (req, res) => {
       }
 
       return res.status(200).send({
-        message: "Project deleted",
+        message: "Project deleted successfully",
         success: true,
         results,
       });
     });
   } catch (error) {
     return res.status(404).send({
-      message: "Error in project delete",
+      message: "Error project",
       success: false,
       error,
     });
