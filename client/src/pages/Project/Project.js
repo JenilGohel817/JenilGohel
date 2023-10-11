@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../../layouts/Layout";
 import "./Project.css";
 import Github from "../../assets/images/projects/Github.png";
+import NodeJs from "../../assets/images/projects/Nodejs.png";
 import Abstract from "../../assets/images/projects/Abstract.png";
 import JG from "../../assets/images/projects/JG.png";
 import Construction from "../../assets/images/projects/Construction.png";
@@ -27,17 +28,12 @@ const Project = () => {
             </div>
             <div className="jg-grid jg-grid-four">
               <div className="jg-project-card-wrap">
-                <a href={"/"} className="jg-project-card">
-                  <div className="jg-project-image-wrap">
-                    <img className="jg-project-image" src={JG} alt="JG" />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Jenil Gohel</div>
-                  <div className="jg-project-position">Portfolio</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a href={"/"} className="jg-project-card">
+                <a
+                  href="https://github.com/JenilGohel817"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="jg-project-card"
+                >
                   <div className="jg-project-image-wrap">
                     <img
                       className="jg-project-image"
@@ -48,6 +44,94 @@ const Project = () => {
                   <div className="jg-project-hover"></div>
                   <div className="jg-project-name">Github</div>
                   <div className="jg-project-position">Projects</div>
+                </a>
+              </div>
+              <div className="jg-project-card-wrap">
+                <a
+                  href="https://jenil-gohel.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="jg-project-card"
+                >
+                  <div className="jg-project-image-wrap">
+                    <img className="jg-project-image" src={JG} alt="JG" />
+                  </div>
+                  <div className="jg-project-hover"></div>
+                  <div className="jg-project-name">Jenil Gohel</div>
+                  <div className="jg-project-position">Portfolio</div>
+                </a>
+              </div>
+              <div className="jg-project-card-wrap">
+                <a
+                  href="https://metallic.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="jg-project-card"
+                >
+                  <div className="jg-project-image-wrap">
+                    <img
+                      className="jg-project-image"
+                      src={Metallic}
+                      alt="Metallic"
+                    />
+                  </div>
+                  <div className="jg-project-hover"></div>
+                  <div className="jg-project-name">Metallic</div>
+                  <div className="jg-project-position">Cloud</div>
+                </a>
+              </div>
+
+              <div className="jg-project-card-wrap">
+                <a
+                  href="https://evolnetwork.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="jg-project-card"
+                >
+                  <div className="jg-project-image-wrap">
+                    <img className="jg-project-image" src={Evol} alt="Evol" />
+                  </div>
+                  <div className="jg-project-hover"></div>
+                  <div className="jg-project-name">Evol Network</div>
+                  <div className="jg-project-position">Crypto</div>
+                </a>
+              </div>
+              <div className="jg-project-card-wrap">
+                <a
+                  href="https://marketrill.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="jg-project-card"
+                >
+                  <div className="jg-project-image-wrap">
+                    <img
+                      className="jg-project-image"
+                      src={Market}
+                      alt="Market"
+                    />
+                  </div>
+                  <div className="jg-project-hover"></div>
+                  <div className="jg-project-name">Marketrill</div>
+                  <div className="jg-project-position">Crypto</div>
+                </a>
+              </div>
+              <div className="jg-project-card-wrap">
+                <a
+                  href="https://github.com/JenilGohel817/Node"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="jg-project-card"
+                >
+                  <div className="jg-project-image-wrap">
+                    <img
+                      className="jg-project-image"
+                      src={NodeJs}
+                      alt="Space"
+                    />
+                  </div>
+                  <div className="jg-project-hover"></div>
+                  <div className="jg-project-name">NodeJs</div>
+                  <div className="jg-project-position">Backend</div>
                 </a>
               </div>
               <div className="jg-project-card-wrap">
@@ -76,16 +160,6 @@ const Project = () => {
                   <div className="jg-project-hover"></div>
                   <div className="jg-project-name">Construction</div>
                   <div className="jg-project-position">Construction</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a href={"/"} className="jg-project-card">
-                  <div className="jg-project-image-wrap">
-                    <img className="jg-project-image" src={Evol} alt="Evol" />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Evol Network</div>
-                  <div className="jg-project-position">It Company</div>
                 </a>
               </div>
               <div className="jg-project-card-wrap">
@@ -140,34 +214,7 @@ const Project = () => {
                   <div className="jg-project-position">Travelling</div>
                 </a>
               </div>
-              <div className="jg-project-card-wrap">
-                <a href={"/"} className="jg-project-card">
-                  <div className="jg-project-image-wrap">
-                    <img
-                      className="jg-project-image"
-                      src={Market}
-                      alt="Market"
-                    />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Market</div>
-                  <div className="jg-project-position">It Company</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a href={"/"} className="jg-project-card">
-                  <div className="jg-project-image-wrap">
-                    <img
-                      className="jg-project-image"
-                      src={Metallic}
-                      alt="Metallic"
-                    />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Metallic</div>
-                  <div className="jg-project-position">Cloud</div>
-                </a>
-              </div>
+
               <div className="jg-project-card-wrap">
                 <a href={"/"} className="jg-project-card">
                   <div className="jg-project-image-wrap">

@@ -1,5 +1,5 @@
 .jg-header {
-    background: var(--jg-white);
+    background: var(--jg-box-black);
     text-align: center;
     color: var(--jg-primary);
 }
@@ -35,7 +35,7 @@
 }
 
 .jg-header-menu-right ul li {
-    padding: 1rem 0;
+    padding: 1.875rem 0;
 }
 
 .jg-header-menu-icon {
@@ -70,7 +70,7 @@
     position: absolute;
     width: 80%;
     height: 2px;
-    background: var(--jg-primary);
+    background: var(--jg-secondary);
     z-index: 1;
     left: 50%;
     transform: translate(-50%, -50%);

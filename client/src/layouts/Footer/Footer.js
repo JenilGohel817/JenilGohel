@@ -10,7 +10,7 @@ const Footer = () => {
       <footer className="jg-footer">
         <div className="jg-container">
           <div className="jg-footer-wrap">
-            <h2>JG</h2>
+            <a className="jg-footer-fs" href={"/"}>JG</a>
             <div className="jg-footer-wrapper">
               <div className="jg-footer-link">
                 <a

@@ -1,8 +1,8 @@
 .jg-footer {
-    background: var(--jg-white);
-    padding: 1rem 0;
+    background: var(--jg-box-black);
+    padding: 1.875rem 0;
     text-align: center;
-    color: var(--jg-primary);
+    color: var(--jg-secondary);
 }
 
 .jg-footer-wrapper {
@@ -10,6 +10,11 @@
     align-items: center;
     justify-content: center;
     max-width: 100%;
+}
+
+.jg-footer-fs {
+    color: var(--jg-secondary);
+    font-size: 2rem;
 }
 
 .jg-footer-wrap {
