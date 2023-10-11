@@ -1,8 +1,9 @@
 import React from "react";
 import Layout from "../../layouts/Layout";
 import "./Project.css";
-import JG from "../../assets/images/projects/JG.png";
+import Github from "../../assets/images/projects/Github.png";
 import Abstract from "../../assets/images/projects/Abstract.png";
+import JG from "../../assets/images/projects/JG.png";
 import Construction from "../../assets/images/projects/Construction.png";
 import Evol from "../../assets/images/projects/Evol.png";
 import Food from "../../assets/images/projects/Food.png";
@@ -33,6 +34,20 @@ const Project = () => {
                   <div className="jg-project-hover"></div>
                   <div className="jg-project-name">Jenil Gohel</div>
                   <div className="jg-project-position">Portfolio</div>
+                </a>
+              </div>
+              <div className="jg-project-card-wrap">
+                <a href={"/"} className="jg-project-card">
+                  <div className="jg-project-image-wrap">
+                    <img
+                      className="jg-project-image"
+                      src={Github}
+                      alt="Github"
+                    />
+                  </div>
+                  <div className="jg-project-hover"></div>
+                  <div className="jg-project-name">Github</div>
+                  <div className="jg-project-position">Projects</div>
                 </a>
               </div>
               <div className="jg-project-card-wrap">
