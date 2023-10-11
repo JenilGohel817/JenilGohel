@@ -101,7 +101,9 @@
     section, .jg-section {
         padding: 1.875rem 0;
       }
-      
+      .jg-project-card {
+        height: 250px;
+    }
     .jg-grid-four {
         grid: auto / 1fr;
         grid-column-gap: 10px;

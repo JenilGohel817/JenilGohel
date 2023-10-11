@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
     Setloading(false);
     setTimeout(() => {
       Setloading(true);
-    }, 1000);
+    });
   }, []);
 
   return (
