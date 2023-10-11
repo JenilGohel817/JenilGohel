@@ -77,6 +77,12 @@ const AboutUs = () => {
                       </ul>
                     </div>
                     <div className="jg-about-box-btn">
+                      <a
+                        className="jg-button jg-w100"
+                        href="mailto:jenilgohel817@gmail.com"
+                      >
+                        Gmail
+                      </a>
                       <a className="jg-button jg-w100" href={"/ContactUs"}>
                         Contact Us
                       </a>

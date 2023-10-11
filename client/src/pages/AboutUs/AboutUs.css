@@ -142,6 +142,9 @@
 .jg-about-box-btn {
     padding-top: 1.875rem;
     text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .jg-experience-info-list {

@@ -125,6 +125,9 @@
     .jg-project-info-wrap {
         grid: auto / 1fr;
     }
+    .jg-about-box-btn {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 425px) {
