@@ -1,15 +1,30 @@
 import dbConnect from "../database/dbConnect.js";
+import slugify from "slugify";
+import { cloudinary } from "../middleware/fileUpload.js";
 
 const projectCreate = async (req, res) => {
   try {
     const { Title, Category, Link } = req.body;
-    const Thumbnail = req.file.filename;
 
-    console.log(Title, Category, Thumbnail, Title);
+    const Thumbnail = req.file.path;
+
+    const Thumbnail_cloudinary_Url = await cloudinary.uploader.upload(
+      Thumbnail,
+      {
+        folder: "projects",
+      }
+    );
+
+    const url = Thumbnail_cloudinary_Url;
+    const secure_url = url.secure_url;
+
+    const Slug = slugify(Title);
 
     const sql =
-      "INSERT INTO project(Thumbnail, Title, Category, Link) VALUES ?";
-    const values = [[Thumbnail, Title, Category, Link]];
+      "INSERT INTO project(Slug, Thumbnail, Title, Category, Link) VALUES ?";
+    const values = [[Slug, secure_url, Title, Category, Link]];
+
+    console.log(values);
 
     dbConnect.query(sql, [values], function (error, results, fields) {
       if (error) {
@@ -22,6 +37,7 @@ const projectCreate = async (req, res) => {
       });
     });
   } catch (error) {
+    console.log(error);
     return res.status(404).send({
       message: "Error project",
       success: false,
@@ -32,7 +48,8 @@ const projectCreate = async (req, res) => {
 
 const projectGet = async (req, res) => {
   try {
-    const sql = "SELECT Id, Thumbnail, Title, Category, Link FROM project";
+    const sql =
+      "SELECT Id, Slug, Thumbnail, Title, Category, Link FROM project";
 
     dbConnect.query(sql, function (error, results, fields) {
       if (error) {
@@ -53,13 +70,38 @@ const projectGet = async (req, res) => {
   }
 };
 
-const projectGetSingle = async (req, res) => {
+const projectGetSingleId = async (req, res) => {
   try {
     const id = req.params.id;
 
-    const sql = `SELECT Id, Thumbnail, Title, Category, Link FROM project WHERE id=${id}`;
+    const sql = `SELECT Id, Slug, Thumbnail, Title, Category, Link FROM project WHERE id=${id}`;
 
     dbConnect.query(sql, function (error, results, fields) {
+      if (error) {
+        console.log(error);
+      }
+      return res.status(200).send({
+        message: "project single fetched!",
+        success: true,
+        results,
+      });
+    });
+  } catch (error) {
+    return res.status(404).send({
+      message: "Error project",
+      success: false,
+      error,
+    });
+  }
+};
+
+const projectGetSingleSlug = async (req, res) => {
+  try {
+    const slug = req.params.slug;
+
+    const sql = `SELECT Id, Slug, Thumbnail, Title, Category, Link FROM project WHERE Slug = ?`;
+
+    dbConnect.query(sql, slug, function (error, results, fields) {
       if (error) {
         console.log(error);
       }
@@ -84,6 +126,7 @@ const projectUpdate = async (req, res) => {
 
     const { Title, Category, Link } = req.body;
     const Thumbnail = req.file.filename;
+    const Slug = slugify(Title);
 
     if (!Title || !Category || !Link || !Thumbnail) {
       return res.status(404).json({
@@ -91,8 +134,8 @@ const projectUpdate = async (req, res) => {
         success: false,
       });
     } else {
-      const sql = `UPDATE project SET Title = ?, Category = ?, Link = ?, Thumbnail = ? WHERE id = ?`;
-      const values = [Title, Category, Link, Thumbnail, Id];
+      const sql = `UPDATE project SET Slug = ?, Thumbnail = ?, Title = ?, Category = ?, Link = ? WHERE id = ?`;
+      const values = [Id, Slug, Thumbnail, Title, Category, Link];
 
       dbConnect.query(sql, values, async function (error, results, fields) {
         if (error) {
@@ -143,7 +186,8 @@ const projectDelete = async (req, res) => {
 export {
   projectCreate,
   projectGet,
-  projectGetSingle,
+  projectGetSingleId,
+  projectGetSingleSlug,
   projectUpdate,
   projectDelete,
 };

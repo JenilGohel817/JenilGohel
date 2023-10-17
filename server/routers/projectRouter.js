@@ -3,10 +3,11 @@ import {
   projectCreate,
   projectDelete,
   projectGet,
-  projectGetSingle,
+  projectGetSingleId,
+  projectGetSingleSlug,
   projectUpdate,
 } from "../controllers/projectController.js";
-import upload from "../middleware/fileUpload.js";
+import { upload } from "../middleware/fileUpload.js";
 const router = express.Router();
 
 router.post("/projectCreate", upload.single("Thumbnail"), projectCreate);
@@ -17,6 +18,8 @@ router.delete("/projectDelete/:id", projectDelete);
 
 router.put("/projectUpdate/:id", upload.single("Thumbnail"), projectUpdate);
 
-router.get("/projectGetSingle/:id", projectGetSingle);
+router.get("/projectGetSingleId/:id", projectGetSingleId);
+
+router.get("/projectGetSingleSlug/:slug", projectGetSingleSlug);
 
 export default router;

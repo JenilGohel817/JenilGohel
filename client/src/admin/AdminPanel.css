@@ -1,0 +1,18 @@
+.jg-table {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.jg-table-image {
+    width: 150px;
+    height: 150px;
+}
+
+.jg-table th {
+    font-weight: 500;
+}
+
+.jg-table-td {
+    padding-top: 1.875rem;
+}

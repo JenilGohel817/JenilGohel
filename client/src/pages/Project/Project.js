@@ -80,7 +80,6 @@ const Project = () => {
                   <div className="jg-project-position">Cloud</div>
                 </a>
               </div>
-
               <div className="jg-project-card-wrap">
                 <a
                   href="https://evolnetwork.com/"
@@ -214,7 +213,6 @@ const Project = () => {
                   <div className="jg-project-position">Travelling</div>
                 </a>
               </div>
-
               <div className="jg-project-card-wrap">
                 <a href={"/"} className="jg-project-card">
                   <div className="jg-project-image-wrap">
