@@ -56,8 +56,8 @@ const AdminPanel = () => {
       );
       if (data?.success) {
         toast.success(data.message);
-        fetchProject();
       }
+      fetchProject();
     } catch (error) {}
   };
 
