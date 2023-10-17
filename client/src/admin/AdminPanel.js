@@ -20,8 +20,6 @@ const AdminPanel = () => {
     formData.append("Category", category);
     formData.append("Link", link);
 
-    console.log(formData);
-
     try {
       const { data } = await axios.post(
         `${process.env.REACT_APP_JGAPI_V1}/project/projectCreate`,
@@ -30,8 +28,8 @@ const AdminPanel = () => {
 
       if (data.success) {
         toast.success(data.message);
+        fetchProject();
       }
-      fetchProject();
     } catch (error) {
       toast.error(error.message);
     }
@@ -58,8 +56,8 @@ const AdminPanel = () => {
       );
       if (data?.success) {
         toast.success(data.message);
+        fetchProject();
       }
-      fetchProject();
     } catch (error) {}
   };
 
