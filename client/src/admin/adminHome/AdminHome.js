@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./AdminPanel.css";
+import "./AdminHome.css";
 import axios from "axios";
-import Layout from "../layouts/Layout";
+import Layout from "../../layouts/Layout";
 import { toast } from "react-toastify";
 
 const AdminPanel = () => {
@@ -184,7 +184,7 @@ const AdminPanel = () => {
                   <td className="jg-table-td">{el.Category}</td>
                   <td className="jg-table-td">{el.Link}</td>
                   <td className="jg-table-td">
-                    <a href={el.slug} className="jg-button">
+                    <a href={`/admin/${el.Slug}`} className="jg-button">
                       Edit
                     </a>
                   </td>

@@ -6,7 +6,7 @@ const projectCreate = async (req, res) => {
   try {
     const { Title, Category, Link } = req.body;
 
-    const Thumbnail = req.file.path;
+    const Thumbnail = req.file.originalname;
 
     const Thumbnail_cloudinary_Url = await cloudinary.uploader.upload(
       Thumbnail,
@@ -74,7 +74,7 @@ const projectGetSingleId = async (req, res) => {
   try {
     const id = req.params.id;
 
-    const sql = `SELECT Id, Slug, Thumbnail, Title, Category, Link FROM project WHERE id=${id}`;
+    const sql = `SELECT Id, Slug, Thumbnail, Title, Category, Link FROM project WHERE Id=${id}`;
 
     dbConnect.query(sql, function (error, results, fields) {
       if (error) {
@@ -125,30 +125,41 @@ const projectUpdate = async (req, res) => {
     const Id = req.params.id;
 
     const { Title, Category, Link } = req.body;
-    const Thumbnail = req.file.filename;
+
+    let Thumbnail;
+
+    if (req.file !== undefined && req.file.filename !== undefined) {
+      Thumbnail = req.file.originalname;
+    }
+
+    const Thumbnail_cloudinary_Url = await cloudinary.uploader.upload(
+      Thumbnail,
+      {
+        folder: "projects",
+      }
+    );
+
+    const url = Thumbnail_cloudinary_Url;
+    const secure_url = url.secure_url;
+
     const Slug = slugify(Title);
 
-    if (!Title || !Category || !Link || !Thumbnail) {
-      return res.status(404).json({
-        message: "All fields are required",
-        success: false,
-      });
-    } else {
-      const sql = `UPDATE project SET Slug = ?, Thumbnail = ?, Title = ?, Category = ?, Link = ? WHERE id = ?`;
-      const values = [Id, Slug, Thumbnail, Title, Category, Link];
+    const sql = `UPDATE project SET  Slug = ?, Thumbnail = ?, Title = ?, Category = ?, Link = ? WHERE Id = ${Id}`;
+    const values = [Slug, secure_url, Title, Category, Link];
 
-      dbConnect.query(sql, values, async function (error, results, fields) {
-        if (error) {
-          console.log(error);
-        }
-        return res.status(200).send({
-          message: "Project successfully updated",
-          success: true,
-          results,
-        });
+    dbConnect.query(sql, values, async function (error, results, fields) {
+      if (error) {
+        console.log(error);
+      }
+      console.log("test 5 ===>", results);
+      return res.status(200).send({
+        message: "Project successfully updated",
+        success: true,
+        results,
       });
-    }
+    });
   } catch (error) {
+    console.log(error);
     return res.status(404).send({
       message: "Error updating",
       success: false,
