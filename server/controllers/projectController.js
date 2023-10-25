@@ -9,14 +9,19 @@ const projectCreate = async (req, res) => {
     const Thumbnail = req.file.originalname;
 
     const Thumbnail_cloudinary_Url = await cloudinary.uploader.upload(
-      Thumbnail,
+      `uploads/${Thumbnail}`,
       {
         folder: "projects",
+        use_filename: true,
       }
     );
 
+    console.log("===========>", Thumbnail_cloudinary_Url);
+
     const url = Thumbnail_cloudinary_Url;
     const secure_url = url.secure_url;
+
+    console.log("=============>", secure_url);
 
     const Slug = slugify(Title);
 
