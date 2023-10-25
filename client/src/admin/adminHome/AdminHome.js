@@ -5,6 +5,7 @@ import Layout from "../../layouts/Layout";
 import { toast } from "react-toastify";
 
 const AdminPanel = () => {
+  const [load, setLoad] = useState(false);
   const [data, setData] = useState([]);
   const [thumbnail, setThumbnail] = useState("");
   const [title, setTitle] = useState("");
@@ -20,6 +21,8 @@ const AdminPanel = () => {
     formData.append("Category", category);
     formData.append("Link", link);
 
+    setLoad(true);
+
     try {
       const { data } = await axios.post(
         `${process.env.REACT_APP_JGAPI_V1}/project/projectCreate`,
@@ -27,6 +30,7 @@ const AdminPanel = () => {
       );
 
       if (data.success) {
+        setLoad(false);
         toast.success(data.message);
         fetchProject();
       }
@@ -149,7 +153,7 @@ const AdminPanel = () => {
                 </div>
                 <div className="jg-pt30 jg-text-right">
                   <button type="submit" className="jg-button">
-                    Add Project
+                    {load ? "Adding Project..." : "Add Project"}
                   </button>
                 </div>
               </form>
