@@ -21,7 +21,7 @@ html {
   --jg-primary: #1a1b22;
   --jg-box-white: #f3f5f9;
   --jg-secondary: #1961fe;
-  --jg-box-black: #e5e5e508;
+  --jg-box-black: #202128;
   --jg-light-gray: #afb1b8;
 }
 
@@ -130,8 +130,8 @@ p {
 /* Scroll Bar */
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 4px;
+  width: 2px;
+  height: 2px;
 }
 
 ::-webkit-scrollbar-track {

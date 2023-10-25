@@ -1,7 +1,10 @@
 .jg-header {
-    background: var(--jg-box-black);
-    text-align: center;
-    color: var(--jg-primary);
+  background: var(--jg-box-black);
+  text-align: center;
+  position: sticky;
+  color: var(--jg-primary);
+  top: 0;
+  z-index: 99;
 }
 
 .jg-logo {
