@@ -134,7 +134,7 @@ const projectUpdate = async (req, res) => {
     }
 
     const Thumbnail_cloudinary_Url = await cloudinary.uploader.upload(
-      Thumbnail,
+      `uploads/${Thumbnail}`,
       {
         folder: "projects",
       }

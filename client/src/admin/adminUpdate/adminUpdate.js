@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import "./adminUpdate.css";
 
 const AdminUpdate = () => {
+  const [load, setLoad] = useState(false);
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [thumbnail, setThumbnail] = useState("");
@@ -41,6 +42,8 @@ const AdminUpdate = () => {
 
   const updateProject = async (e) => {
     e.preventDefault();
+
+    setLoad(true);
     try {
       const formData = new FormData();
       formData.append("Title", title);
@@ -58,6 +61,7 @@ const AdminUpdate = () => {
       console.log(data);
 
       if (data.success) {
+        setLoad(false);
         toast.success(data.message);
         navigate("/admin");
       }
@@ -155,7 +159,7 @@ const AdminUpdate = () => {
                   </div>
                   <div className="jg-pt30 jg-text-right">
                     <button type="submit" className="jg-button">
-                      Update Project
+                      {load ? "Updateing..." : "Update Project"}
                     </button>
                   </div>
                 </form>
