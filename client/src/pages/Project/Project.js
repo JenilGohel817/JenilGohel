@@ -1,22 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../../layouts/Layout";
+import axios from "axios";
+import { toast } from "react-toastify";
 import "./Project.css";
-import Github from "../../assets/images/projects/Github.png";
-import NodeJs from "../../assets/images/projects/Nodejs.png";
-import Abstract from "../../assets/images/projects/Abstract.png";
-import JG from "../../assets/images/projects/JG.png";
-import Construction from "../../assets/images/projects/Construction.png";
-import Evol from "../../assets/images/projects/Evol.png";
-import Food from "../../assets/images/projects/Food.png";
-import Furthest from "../../assets/images/projects/Furthest.png";
-import Hiking from "../../assets/images/projects/Hiking.png";
-import KJK from "../../assets/images/projects/KJK.png";
-import Market from "../../assets/images/projects/Market.png";
-import Metallic from "../../assets/images/projects/Metallic.png";
-import Netflix from "../../assets/images/projects/Netflix.png";
-import Space from "../../assets/images/projects/Space.png";
 
 const Project = () => {
+  const [data, setData] = useState([]);
+
+  const fetchProject = async () => {
+    try {
+      const data = await axios.get(
+        `${process.env.REACT_APP_JGAPI_V1}/project/projectGet`
+      );
+      if (data?.success) {
+        toast.success(data.message);
+      }
+      setData(data);
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
+
+  useEffect(() => {
+    fetchProject();
+    // eslint-disable-next-line
+  }, []);
   return (
     <>
       <Layout>
@@ -27,216 +35,27 @@ const Project = () => {
               <h2>All Projects</h2>
             </div>
             <div className="jg-grid jg-grid-four">
-              <div className="jg-project-card-wrap">
-                <a
-                  href="https://github.com/JenilGohel817"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="jg-project-card"
-                >
-                  <div className="jg-project-image-wrap">
-                    <img
-                      className="jg-project-image"
-                      src={Github}
-                      alt="Github"
-                    />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Github</div>
-                  <div className="jg-project-position">Projects</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a
-                  href="https://jenil-gohel.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="jg-project-card"
-                >
-                  <div className="jg-project-image-wrap">
-                    <img className="jg-project-image" src={JG} alt="JG" />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Jenil Gohel</div>
-                  <div className="jg-project-position">Portfolio</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a
-                  href="https://metallic.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="jg-project-card"
-                >
-                  <div className="jg-project-image-wrap">
-                    <img
-                      className="jg-project-image"
-                      src={Metallic}
-                      alt="Metallic"
-                    />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Metallic</div>
-                  <div className="jg-project-position">Cloud</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a
-                  href="https://evolnetwork.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="jg-project-card"
-                >
-                  <div className="jg-project-image-wrap">
-                    <img className="jg-project-image" src={Evol} alt="Evol" />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Evol Network</div>
-                  <div className="jg-project-position">Crypto</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a
-                  href="https://marketrill.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="jg-project-card"
-                >
-                  <div className="jg-project-image-wrap">
-                    <img
-                      className="jg-project-image"
-                      src={Market}
-                      alt="Market"
-                    />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Marketrill</div>
-                  <div className="jg-project-position">Crypto</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a
-                  href="https://github.com/JenilGohel817/Node"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="jg-project-card"
-                >
-                  <div className="jg-project-image-wrap">
-                    <img
-                      className="jg-project-image"
-                      src={NodeJs}
-                      alt="Space"
-                    />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">NodeJs</div>
-                  <div className="jg-project-position">Backend</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a href={"/"} className="jg-project-card">
-                  <div className="jg-project-image-wrap">
-                    <img
-                      className="jg-project-image"
-                      src={Abstract}
-                      alt="Abstract"
-                    />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Abstract</div>
-                  <div className="jg-project-position">Agency</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a href={"/"} className="jg-project-card">
-                  <div className="jg-project-image-wrap">
-                    <img
-                      className="jg-project-image"
-                      src={Construction}
-                      alt="JenilGohel"
-                    />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Construction</div>
-                  <div className="jg-project-position">Construction</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a href={"/"} className="jg-project-card">
-                  <div className="jg-project-image-wrap">
-                    <img className="jg-project-image" src={Food} alt="Food" />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Food</div>
-                  <div className="jg-project-position">Food</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a href={"/"} className="jg-project-card">
-                  <div className="jg-project-image-wrap">
-                    <img
-                      className="jg-project-image"
-                      src={Furthest}
-                      alt="Furthest"
-                    />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Furthest</div>
-                  <div className="jg-project-position">Construction</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a href={"/"} className="jg-project-card">
-                  <div className="jg-project-image-wrap">
-                    <img
-                      className="jg-project-image"
-                      src={Hiking}
-                      alt="Hiking"
-                    />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Hiking</div>
-                  <div className="jg-project-position">Travelling</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a href={"/"} className="jg-project-card">
-                  <div className="jg-project-image-wrap">
-                    <img
-                      className="jg-project-image"
-                      src={KJK}
-                      alt="JenilGohel"
-                    />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">KJK</div>
-                  <div className="jg-project-position">Travelling</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a href={"/"} className="jg-project-card">
-                  <div className="jg-project-image-wrap">
-                    <img
-                      className="jg-project-image"
-                      src={Netflix}
-                      alt="Netflix"
-                    />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Netflix</div>
-                  <div className="jg-project-position">Streaming</div>
-                </a>
-              </div>
-              <div className="jg-project-card-wrap">
-                <a href={"/"} className="jg-project-card">
-                  <div className="jg-project-image-wrap">
-                    <img className="jg-project-image" src={Space} alt="Space" />
-                  </div>
-                  <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">Space</div>
-                  <div className="jg-project-position">Management</div>
-                </a>
-              </div>
+              {data?.data?.results?.map((el) => (
+                <div key={el.Id} className="jg-project-card-wrap">
+                  <a
+                    href={el.Link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="jg-project-card"
+                  >
+                    <div className="jg-project-image-wrap">
+                      <img
+                        className="jg-project-image"
+                        src={el.Thumbnail}
+                        alt={el.Title}
+                      />
+                    </div>
+                    <div className="jg-project-hover"></div>
+                    <div className="jg-project-name">{el.Title}</div>
+                    <div className="jg-project-position">{el.Category}</div>
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
         </section>

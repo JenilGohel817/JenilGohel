@@ -14,7 +14,6 @@ const AdminPanel = () => {
 
   const createProject = async (e) => {
     e.preventDefault();
-
     const formData = new FormData();
     formData.append("Title", title);
     formData.append("Thumbnail", thumbnail);
@@ -163,50 +162,41 @@ const AdminPanel = () => {
       </section>
       <section className="jg-section">
         <div className="jg-container">
-          <table className="jg-table">
-            <thead>
-              <tr>
-                <th>Id</th>
-                <th>Thumbnail</th>
-                <th>Category</th>
-                <th>Link</th>
-                <th>Edit</th>
-                <th>Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data?.data?.results?.map((el) => (
-                <tr key={el.Id} className="jg-table-pt">
-                  <td className="jg-table-td">{el.Id}</td>
-                  <td className="jg-table-td">
+          <div className="jg-grid jg-grid-four">
+            {data?.data?.results?.map((el) => (
+              <div key={el.Id} className="jg-project-card-wrap">
+                <div className="jg-project-card">
+                  <div className="jg-project-image-wrap">
                     <img
-                      className="jg-table-image"
-                      alt={el.Thumbnail}
+                      className="jg-project-image"
                       src={el.Thumbnail}
+                      alt={el.Title}
                     />
-                  </td>
-                  <td className="jg-table-td">{el.Category}</td>
-                  <td className="jg-table-td">{el.Link}</td>
-                  <td className="jg-table-td">
-                    <a href={`/admin/${el.Slug}`} className="jg-button">
-                      Edit
-                    </a>
-                  </td>
-                  <td className="jg-table-td">
-                    <button
-                      className="jg-button"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        projectDelete(el.Id);
-                      }}
-                    >
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                  </div>
+                  <div className="jg-project-hover"></div>
+                  <div className="jg-project-name">{el.Title}</div>
+                  <div className="jg-project-position">{el.Category}</div>
+                </div>
+                <div className="jg-project-button-wrap">
+                  <a
+                    href={`/admin/${el.Slug}`}
+                    className="jg-button jg-project-button"
+                  >
+                    Edit
+                  </a>
+                  <button
+                    className="jg-button jg-project-button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      projectDelete(el.Id);
+                    }}
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </Layout>
