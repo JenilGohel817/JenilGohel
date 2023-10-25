@@ -16,12 +16,8 @@ const projectCreate = async (req, res) => {
       }
     );
 
-    console.log("===========>", Thumbnail_cloudinary_Url);
-
     const url = Thumbnail_cloudinary_Url;
     const secure_url = url.secure_url;
-
-    console.log("=============>", secure_url);
 
     const Slug = slugify(Title);
 
