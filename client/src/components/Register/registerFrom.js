@@ -1,8 +1,33 @@
-import React from "react";
-import "./registerFrom.css";
+import React, { useState } from "react";
+import "./RegisterFrom.css";
+import axios from "axios";
 import Layout from "../../layouts/Layout.js";
+import { toast } from "react-toastify";
 
-const registerFrom = () => {
+const RegisterFrom = () => {
+  const [RfEmail, setRfEmail] = useState("");
+  const [Rfpassword, setRfPassword] = useState("");
+
+  const RegisterSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const registerValue = {
+        RfEmail,
+        Rfpassword,
+      };
+
+      const data = await axios.post(
+        `${process.env.REACT_APP_JGAPI_V1}/auth/register`,
+        registerValue
+      );
+      if (data?.success) {
+        toast.success(data.message);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
+
   return (
     <>
       <Layout>
@@ -17,6 +42,7 @@ const registerFrom = () => {
                 <form
                   className="jg-contact-form"
                   method="post"
+                  onSubmit={RegisterSubmit}
                   encType="multipart/form-data"
                 >
                   <div className="form-grid-item">
@@ -27,6 +53,9 @@ const registerFrom = () => {
                       className="form-input"
                       name="Email"
                       type="email"
+                      onChange={(e) => {
+                        setRfEmail(e.target.value);
+                      }}
                       placeholder="Email"
                       required
                     />
@@ -38,7 +67,10 @@ const registerFrom = () => {
                     <input
                       className="form-input"
                       name="Password"
-                      type="number"
+                      onChange={(e) => {
+                        setRfPassword(e.target.value);
+                      }}
+                      type="password"
                       placeholder="Password"
                       required
                     />
@@ -63,4 +95,4 @@ const registerFrom = () => {
   );
 };
 
-export default registerFrom;
+export default RegisterFrom;

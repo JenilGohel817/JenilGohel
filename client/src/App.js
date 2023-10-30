@@ -6,7 +6,7 @@ import AboutUs from "./pages/AboutUs/AboutUs.js";
 import AdminHome from "./admin/adminHome/AdminHome.js";
 import AdminUpdate from "./admin/adminUpdate/adminUpdate.js";
 import LoginFrom from "./components/Login/loginFrom.js";
-import RegisterFrom from "./components/Register/registerFrom.js";
+import RegisterFrom from "./components/Register/RegisterFrom.js";
 
 function App() {
   return (
