@@ -3,25 +3,32 @@ import "./RegisterFrom.css";
 import axios from "axios";
 import Layout from "../../layouts/Layout.js";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const RegisterFrom = () => {
+  const [loading, setLoading] = useState(false);
   const [RfEmail, setRfEmail] = useState("");
   const [Rfpassword, setRfPassword] = useState("");
+  const navigate = useNavigate();
 
   const RegisterSubmit = async (e) => {
+    setLoading(true);
     e.preventDefault();
     try {
       const registerValue = {
-        RfEmail,
-        Rfpassword,
+        Email: RfEmail,
+        Password: Rfpassword,
       };
 
       const data = await axios.post(
         `${process.env.REACT_APP_JGAPI_V1}/auth/register`,
         registerValue
       );
-      if (data?.success) {
-        toast.success(data.message);
+
+      if (data?.data?.success) {
+        toast.success(data.data.message);
+        setLoading(false);
+        navigate("/");
       }
     } catch (error) {
       toast.error(error.message);
@@ -82,7 +89,7 @@ const RegisterFrom = () => {
                   </div>
                   <div className="jg-pt30 jg-text-right">
                     <button type="submit" className="jg-button">
-                      Login
+                      {loading ? "Register..." : "Register"}
                     </button>
                   </div>
                 </form>

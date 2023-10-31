@@ -1,6 +1,5 @@
 import dbConnect from "../database/dbConnect.js";
 import { comparePassword, hashPassword } from "../middleware/hashPassword.js";
-import bcrypt from "bcrypt";
 
 const authLogin = async (req, res) => {
   try {
@@ -66,9 +65,9 @@ const authLogin = async (req, res) => {
 
 const authRegister = async (req, res) => {
   try {
-    const { Email, Password } = req.body;
+    const { Email, Password, Role } = req.body;
 
-    if (!Email || !Password) {
+    if (!Email || !Password || !Role) {
       return res.status(404).send({
         message: "All fields are required",
         success: false,
@@ -76,10 +75,12 @@ const authRegister = async (req, res) => {
     }
 
     const hashPass = await hashPassword(Password);
+    const userRole = Role || "User";
 
-    const sql = "INSERT INTO user(Email, Password, HashPassword) VALUES ?";
+    const sql =
+      "INSERT INTO user(Email, Role, Password, HashPassword) VALUES ?";
     const sqlEmail = "SELECT COUNT(*) AS count FROM user WHERE Email = ?";
-    const values = [[Email, Password, hashPass]];
+    const values = [[Email, userRole, Password, hashPass]];
 
     dbConnect.query(sqlEmail, [Email], function (err, results) {
       if (err) console.log(err);
