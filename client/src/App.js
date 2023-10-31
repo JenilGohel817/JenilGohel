@@ -4,9 +4,9 @@ import Contact from "./components/Contact/Contact.js";
 import Project from "./pages/Project/Project.js";
 import AboutUs from "./pages/AboutUs/AboutUs.js";
 import AdminHome from "./admin/adminHome/AdminHome.js";
+import LoginFrom from "./components/Login/LoginFrom.js";
 import AdminUpdate from "./admin/adminUpdate/adminUpdate.js";
 import RegisterFrom from "./components/Register/RegisterFrom.js";
-import LoginFrom from "./components/Login/LoginFrom.js";
 
 function App() {
   return (
