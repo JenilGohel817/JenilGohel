@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./LoginFrom.css";
 import axios from "axios";
 import Layout from "../../layouts/Layout.js";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import "./LoginFrom.css";
 
 const LoginFrom = () => {
   const [loading, setLoading] = useState(false);
