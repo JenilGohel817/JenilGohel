@@ -67,7 +67,7 @@ const authLogin = async (req, res) => {
 
 const authRegister = async (req, res) => {
   try {
-    const { Email, Password, Role } = req.body;
+    const { Email, Password } = req.body;
 
     if (!Email || !Password || !Role) {
       return res.status(404).send({
