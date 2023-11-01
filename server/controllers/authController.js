@@ -5,6 +5,8 @@ const authLogin = async (req, res) => {
   try {
     const { Email, Password } = req.body;
 
+    console.log(Email, Password);
+
     if (!Email || !Password) {
       return res.status(404).send({
         message: "All fields are required",

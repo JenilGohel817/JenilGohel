@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./LoginFrom.css";
 import Layout from "../../layouts/Layout.js";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import "./LoginFrom.css";
 
 const LoginFrom = () => {
   const [loading, setLoading] = useState(false);
@@ -12,21 +12,24 @@ const LoginFrom = () => {
   const navigate = useNavigate();
 
   const LoginSubmit = async (e) => {
-    setLoading(true);
     e.preventDefault();
     try {
+      setLoading(true);
+
       const loginValue = {
         Email: LfEmail,
         Password: Lfpassword,
       };
 
-      const data = await axios.get(
+      console.log(loginValue);
+
+      const data = await axios.post(
         `${process.env.REACT_APP_JGAPI_V1}/auth/login`,
         loginValue
       );
 
-      if (data?.data?.success) {
-        toast.success(data.data.message);
+      if (data?.success) {
+        toast.success(data.message);
         setLoading(false);
         navigate("/");
       }
