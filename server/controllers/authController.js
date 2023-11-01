@@ -67,9 +67,9 @@ const authLogin = async (req, res) => {
 
 const authRegister = async (req, res) => {
   try {
-    const { Email, Password } = req.body;
+    const { Email, Password, Role } = req.body;
 
-    if (!Email || !Password) {
+    if (!Email || !Password || !Role) {
       return res.status(404).send({
         message: "All fields are required",
         success: false,
