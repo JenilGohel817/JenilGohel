@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
 
 const RegisterFrom = () => {
   const [loading, setLoading] = useState(false);
-  const [RfEmail, setRfEmail] = useState("");
   const [Rfpassword, setRfPassword] = useState("");
+  const [RfEmail, setRfEmail] = useState("");
   const navigate = useNavigate();
 
   const RegisterSubmit = async (e) => {

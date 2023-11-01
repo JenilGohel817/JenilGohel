@@ -29,8 +29,8 @@ const LoginFrom = () => {
       );
 
       if (data?.success) {
-        toast.success(data.message);
         setLoading(false);
+        toast.success(data.message);
         navigate("/");
       }
     } catch (error) {
