@@ -26,7 +26,7 @@ const LoginFrom = () => {
         loginValue
       );
 
-      if (data?.success) {
+      if (data) {
         setLoading(false);
         toast.success(data.message);
         navigate("/");
