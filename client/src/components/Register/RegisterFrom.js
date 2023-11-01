@@ -9,6 +9,7 @@ const RegisterFrom = () => {
   const [loading, setLoading] = useState(false);
   const [Rfpassword, setRfPassword] = useState("");
   const [RfEmail, setRfEmail] = useState("");
+  const [RfRole, setRfRole] = useState("User");
   const navigate = useNavigate();
 
   const RegisterSubmit = async (e) => {
@@ -18,6 +19,7 @@ const RegisterFrom = () => {
       const registerValue = {
         Email: RfEmail,
         Password: Rfpassword,
+        Role: RfRole,
       };
 
       const data = await axios.post(
@@ -81,6 +83,24 @@ const RegisterFrom = () => {
                       placeholder="Password"
                       required
                     />
+                  </div>
+                  <div className="form-grid-item jg-pt30">
+                    <label htmlFor="Role" className="input-label">
+                      Role
+                    </label>
+                    <select
+                      className="form-input"
+                      name="Role"
+                      value={RfRole}
+                      onChange={(e) => {
+                        setRfRole(e.target.value);
+                      }}
+                      type="text"
+                      placeholder="Role"
+                      required
+                    >
+                      <option value={"User"}>User</option>
+                    </select>
                   </div>
                   <div className="form-grid-item jg-pt30">
                     <label htmlFor="forgetPassword" className="input-label">
