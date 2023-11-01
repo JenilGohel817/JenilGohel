@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -32,9 +33,9 @@ const Header = () => {
           <div className="jg-header-wrapper">
             <div className="jg-header-menu jg-dflex">
               <div className="jg-header-menu-left">
-                <a href={"/"} className="jg-logo">
+                <Link to={"/"} className="jg-logo">
                   <span className="jg-span jg-logo-contant">JG</span>
-                </a>
+                </Link>
               </div>
               <div className="jg-header-menu-icon" onClick={MenuClick}>
                 <span className="jg-header-menu-icon-line jg-header-menu-icon-line-one"></span>
@@ -44,24 +45,24 @@ const Header = () => {
               <div className="jg-header-menu-right">
                 <ul>
                   <li>
-                    <a className="jg-header-link" href={"/"}>
+                    <Link className="jg-header-link" to={"/"}>
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="jg-header-link" href={"/Project"}>
+                    <Link className="jg-header-link" to={"/Project"}>
                       Projects
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="jg-header-link" href={"/AboutUs"}>
+                    <Link className="jg-header-link" to={"/AboutUs"}>
                       About Us
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="jg-header-link" href={"/ContactUs"}>
+                    <Link className="jg-header-link" to={"/ContactUs"}>
                       Contect Us
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

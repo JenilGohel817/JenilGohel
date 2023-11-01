@@ -3,6 +3,7 @@ import "./AdminHome.css";
 import axios from "axios";
 import Layout from "../../layouts/Layout";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const AdminPanel = () => {
   const [load, setLoad] = useState(false);
@@ -178,12 +179,12 @@ const AdminPanel = () => {
                   <div className="jg-project-position">{el.Category}</div>
                 </div>
                 <div className="jg-project-button-wrap">
-                  <a
-                    href={`/admin/${el.Slug}`}
+                  <Link
+                    to={`/admin/${el.Slug}`}
                     className="jg-button jg-project-button"
                   >
                     Edit
-                  </a>
+                  </Link>
                   <button
                     className="jg-button jg-project-button"
                     onClick={(e) => {

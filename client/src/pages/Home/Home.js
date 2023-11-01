@@ -1,6 +1,7 @@
 import Layout from "../../layouts/Layout.js";
 import JG from "../../assets/images/JG.jpg";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -13,9 +14,9 @@ const Home = () => {
                 <span className="jg-span">Jenil Gohel</span> Software Developer
                 Engineer Based in India
               </h1>
-              <a href className="jg-button">
+              <Link to className="jg-button">
                 Resume
-              </a>
+              </Link>
             </div>
             <div className="jg-hero-info jg-py">
               <div className="jg-grid">
@@ -139,9 +140,9 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="jg-button-wrapper">
-                    <a href={"/AboutUs"} className="jg-button">
+                    <Link to={"/AboutUs"} className="jg-button">
                       portfolio details
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="jg-grid-item jg-grid-order-3 jg-text-right">

@@ -3,7 +3,7 @@ import "./RegisterFrom.css";
 import axios from "axios";
 import Layout from "../../layouts/Layout.js";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const RegisterFrom = () => {
   const [loading, setLoading] = useState(false);
@@ -103,9 +103,9 @@ const RegisterFrom = () => {
                     </select>
                   </div>
                   <div className="form-grid-item jg-pt30">
-                    <label htmlFor="forgetPassword" className="input-label">
-                      Forget Password
-                    </label>
+                    <Link to={"/login"} className="input-label">
+                      Login Here
+                    </Link>
                   </div>
                   <div className="jg-pt30 jg-text-right">
                     <button type="submit" className="jg-button">

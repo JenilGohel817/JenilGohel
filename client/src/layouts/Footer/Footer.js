@@ -3,6 +3,7 @@ import linkedin from "../../assets/images/linkedin.png";
 import github from "../../assets/images/github.png";
 import instagram from "../../assets/images/instagram.png";
 import twitter from "../../assets/images/twitter.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -10,47 +11,49 @@ const Footer = () => {
       <footer className="jg-footer">
         <div className="jg-container">
           <div className="jg-footer-wrap">
-            <a className="jg-footer-fs" href={"/"}>JG</a>
+            <Link className="jg-footer-fs" to={"/"}>
+              JG
+            </Link>
             <div className="jg-footer-wrapper">
               <div className="jg-footer-link">
-                <a
-                  href="https://github.com/JenilGohel817"
+                <Link
+                  to="https://github.com/JenilGohel817"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="jg-soical-media-link"
                 >
                   <img alt="social-media" src={github} />
-                </a>
+                </Link>
               </div>
               <div className="jg-footer-link">
-                <a
-                  href="https://www.linkedin.com/in/jenilgohel817/"
+                <Link
+                  to="https://www.linkedin.com/in/jenilgohel817/"
                   target="_blank"
                   className="jg-soical-media-link"
                   rel="noopener noreferrer"
                 >
                   <img alt="social-media" src={linkedin} />
-                </a>
+                </Link>
               </div>
               <div className="jg-footer-link">
-                <a
+                <Link
                   target="_blank"
-                  href="https://twitter.com/JenilGohel817?t=X2acBvdcELd6m7RU41UQOA&s=09"
+                  to="https://twitter.com/JenilGohel817?t=X2acBvdcELd6m7RU41UQOA&s=09"
                   rel="noopener noreferrer"
                   className="jg-soical-media-link"
                 >
                   <img alt="social-media" src={twitter} />
-                </a>
+                </Link>
               </div>
               <div className="jg-footer-link">
-                <a
-                  href="https://instagram.com/jenilgohel817?igshid=MzNlNGNkZWQ4Mg=="
+                <Link
+                  to="https://instagram.com/jenilgohel817?igshid=MzNlNGNkZWQ4Mg=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="jg-soical-media-link"
                 >
                   <img alt="social-media" src={instagram} />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -6,6 +6,7 @@ import instagram from "../../assets/images/instagram.png";
 import twitter from "../../assets/images/twitter.png";
 import Layout from "../../layouts/Layout";
 import "./AboutUs.css";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -35,57 +36,57 @@ const AboutUs = () => {
                     <div className="jg-about-box-social-links">
                       <ul>
                         <li>
-                          <a
-                            href="https://github.com/JenilGohel817"
+                          <Link
+                            to="https://github.com/JenilGohel817"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="jg-soical-media-link"
                           >
                             <img alt="social-media" src={github} />
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            href="https://www.linkedin.com/in/jenilgohel817/"
+                          <Link
+                            to="https://www.linkedin.com/in/jenilgohel817/"
                             target="_blank"
                             className="jg-soical-media-link"
                             rel="noopener noreferrer"
                           >
                             <img alt="social-media" src={linkedin} />
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             target="_blank"
-                            href="https://twitter.com/JenilGohel817?t=X2acBvdcELd6m7RU41UQOA&s=09"
+                            to="https://twitter.com/JenilGohel817?t=X2acBvdcELd6m7RU41UQOA&s=09"
                             rel="noopener noreferrer"
                             className="jg-soical-media-link"
                           >
                             <img alt="social-media" src={twitter} />
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            href="https://instagram.com/jenilgohel817?igshid=MzNlNGNkZWQ4Mg=="
+                          <Link
+                            to="https://instagram.com/jenilgohel817?igshid=MzNlNGNkZWQ4Mg=="
                             target="_blank"
                             rel="noopener noreferrer"
                             className="jg-soical-media-link"
                           >
                             <img alt="social-media" src={instagram} />
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
                     <div className="jg-about-box-btn">
-                      <a
+                      <Link
                         className="jg-button jg-w100"
-                        href="mailto:jenilgohel817@gmail.com"
+                        to="mailto:jenilgohel817@gmail.com"
                       >
                         Gmail
-                      </a>
-                      <a className="jg-button jg-w100" href={"/ContactUs"}>
+                      </Link>
+                      <Link className="jg-button jg-w100" to={"/ContactUs"}>
                         Contact Us
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
