@@ -21,8 +21,6 @@ const LoginFrom = () => {
         Password: Lfpassword,
       };
 
-      console.log(loginValue);
-
       const data = await axios.post(
         `${process.env.REACT_APP_JGAPI_V1}/auth/login`,
         loginValue
