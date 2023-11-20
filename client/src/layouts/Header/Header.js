@@ -45,22 +45,38 @@ const Header = () => {
               <div className="jg-header-menu-right">
                 <ul>
                   <li>
-                    <Link className="jg-header-link" to={"/"}>
+                    <Link
+                      className="jg-header-link"
+                      onClick={MenuClick}
+                      to={"/"}
+                    >
                       Home
                     </Link>
                   </li>
                   <li>
-                    <Link className="jg-header-link" to={"/Project"}>
+                    <Link
+                      className="jg-header-link"
+                      onClick={MenuClick}
+                      to={"/Project"}
+                    >
                       Projects
                     </Link>
                   </li>
                   <li>
-                    <Link className="jg-header-link" to={"/AboutUs"}>
+                    <Link
+                      className="jg-header-link"
+                      onClick={MenuClick}
+                      to={"/AboutUs"}
+                    >
                       About Us
                     </Link>
                   </li>
                   <li>
-                    <Link className="jg-header-link" to={"/ContactUs"}>
+                    <Link
+                      className="jg-header-link"
+                      onClick={MenuClick}
+                      to={"/ContactUs"}
+                    >
                       Contect Us
                     </Link>
                   </li>
