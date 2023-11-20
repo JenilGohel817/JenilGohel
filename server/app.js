@@ -18,9 +18,8 @@ dotenv.config({
 dbConnect.connect(function (error) {
   if (error) {
     throw error;
-  } else {
-    console.log("SQL Connect!");
   }
+  console.log("SQL Connect!");
 });
 
 app.use(
