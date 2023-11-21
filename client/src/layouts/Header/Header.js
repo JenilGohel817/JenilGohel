@@ -4,7 +4,6 @@ import "./Header.css";
 const Header = () => {
   const MenuClick = () => {
     const jgIcon = document.querySelector(".jg-header-menu-right");
-
     const jgLineOne = document.querySelector(".jg-header-menu-icon-line-one");
     const jgLineThree = document.querySelector(
       ".jg-header-menu-icon-line-three"
