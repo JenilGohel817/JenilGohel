@@ -26,6 +26,11 @@ const Header = () => {
     }
   };
 
+  const MenuHeaderClick = () => {
+    const body = document.querySelector("body");
+    body.classList.remove("jg-overflow-hidden");
+  };
+
   return (
     <>
       <header className="jg-header">
@@ -45,22 +50,38 @@ const Header = () => {
               <div className="jg-header-menu-right">
                 <ul>
                   <li>
-                    <Link className="jg-header-link" to={"/"}>
+                    <Link
+                      className="jg-header-link"
+                      onClick={MenuHeaderClick}
+                      to={"/"}
+                    >
                       Home
                     </Link>
                   </li>
                   <li>
-                    <Link className="jg-header-link" to={"/Project"}>
+                    <Link
+                      className="jg-header-link"
+                      onClick={MenuHeaderClick}
+                      to={"/Project"}
+                    >
                       Projects
                     </Link>
                   </li>
                   <li>
-                    <Link className="jg-header-link" to={"/AboutUs"}>
+                    <Link
+                      className="jg-header-link"
+                      onClick={MenuHeaderClick}
+                      to={"/AboutUs"}
+                    >
                       About Us
                     </Link>
                   </li>
                   <li>
-                    <Link className="jg-header-link" to={"/ContactUs"}>
+                    <Link
+                      className="jg-header-link"
+                      onClick={MenuHeaderClick}
+                      to={"/ContactUs"}
+                    >
                       Contect Us
                     </Link>
                   </li>
