@@ -46,7 +46,7 @@ const RegisterFrom = () => {
               <div className="jg-register-item">
                 <div className="jg-heading-wrap">
                   <div className="jg-heading-subtitle">Register</div>
-                  <h2>Help us get to know you:</h2>
+                  <h2>Create Profile</h2>
                 </div>
                 <form
                   className="jg-contact-form"
