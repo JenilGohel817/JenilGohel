@@ -13,7 +13,9 @@ const contactCreate = async (req, res) => {
       const values = [[FirstName, LastName, Email, ProjectDetail]];
 
       dbConnect.query(sqlEmail, [Email], function (err, results) {
-        if (err) console.log(err);
+        if (err) {
+          dbConnect.destroy();
+        }
         const count = results[0].count;
         if (count > 0) {
           res.status(404).send({
@@ -22,7 +24,9 @@ const contactCreate = async (req, res) => {
           });
         } else {
           dbConnect.query(sql, [values], function (err, results) {
-            if (err) console.log(err);
+            if (err) {
+              dbConnect.destroy();
+            }
             return res.status(200).send({
               message: "We will get in touch with you soon",
               success: true,
@@ -49,7 +53,9 @@ const contactFind = async (req, res) => {
   try {
     const sql = "SELECT * FROM contact";
     dbConnect.query(sql, function (err, results) {
-      if (err) console.log(err);
+      if (err) {
+        dbConnect.destroy();
+      }
       res.status(200).send({
         message: "Successful contact fetching",
         success: true,

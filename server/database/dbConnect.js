@@ -19,6 +19,7 @@ const dbConnect = mysql2.createConnection({
 dbConnect.connect(function (err) {
   if (err) {
     console.log(`connectionRequest Failed ${err.stack}`);
+    dbConnect.destroy();
   } else {
     console.log(`DB connectionRequest Successful ${dbConnect.threadId}`);
   }

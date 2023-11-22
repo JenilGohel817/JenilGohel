@@ -29,7 +29,7 @@ const projectCreate = async (req, res) => {
 
     dbConnect.query(sql, [values], function (error, results, fields) {
       if (error) {
-        console.log(error);
+        dbConnect.destroy();
       }
       return res.status(200).send({
         message: "Project created successfully",
@@ -38,7 +38,7 @@ const projectCreate = async (req, res) => {
       });
     });
   } catch (error) {
-    console.log(error);
+    dbConnect.destroy();
     return res.status(404).send({
       message: "Error project",
       success: false,
@@ -54,7 +54,7 @@ const projectGet = async (req, res) => {
 
     dbConnect.query(sql, function (error, results, fields) {
       if (error) {
-        console.log(error);
+        dbConnect.destroy();
       }
       return res.status(200).send({
         message: "Project fetched successfully",
@@ -79,7 +79,7 @@ const projectGetSingleId = async (req, res) => {
 
     dbConnect.query(sql, function (error, results, fields) {
       if (error) {
-        console.log(error);
+        dbConnect.destroy();
       }
       return res.status(200).send({
         message: "project single fetched!",
@@ -104,7 +104,7 @@ const projectGetSingleSlug = async (req, res) => {
 
     dbConnect.query(sql, slug, function (error, results, fields) {
       if (error) {
-        console.log(error);
+        dbConnect.destroy();
       }
       return res.status(200).send({
         message: "project single fetched!",
@@ -150,7 +150,7 @@ const projectUpdate = async (req, res) => {
 
     dbConnect.query(sql, values, async function (error, results, fields) {
       if (error) {
-        console.log(error);
+        dbConnect.destroy();
       }
       console.log("test 5 ===>", results);
       return res.status(200).send({
@@ -160,7 +160,7 @@ const projectUpdate = async (req, res) => {
       });
     });
   } catch (error) {
-    console.log(error);
+    dbConnect.destroy();
     return res.status(404).send({
       message: "Error updating",
       success: false,
@@ -177,7 +177,7 @@ const projectDelete = async (req, res) => {
 
     dbConnect.query(sql, function (error, results, fields) {
       if (error) {
-        console.log(error);
+        dbConnect.destroy();
       }
 
       return res.status(200).send({

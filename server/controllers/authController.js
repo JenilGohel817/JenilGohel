@@ -22,7 +22,9 @@ const authLogin = async (req, res) => {
     }
 
     dbConnect.query(sqlFindEmail, [Email], async function (err, results) {
-      if (err) console.log(err);
+      if (err) {
+        dbConnect.destroy();
+      }
       if (results.length === 0) {
         return res.status(404).send({
           message: "User not found!",
@@ -83,7 +85,9 @@ const authRegister = async (req, res) => {
     const values = [[Email, userRole, Password, hashPass]];
 
     dbConnect.query(sqlEmail, [Email], function (err, results) {
-      if (err) console.log(err);
+      if (err) {
+        dbConnect.destroy();
+      }
       const count = results[0].count;
       if (count > 0) {
         res.status(404).send({
@@ -92,7 +96,9 @@ const authRegister = async (req, res) => {
         });
       } else {
         dbConnect.query(sql, [values], function (err, results) {
-          if (err) console.log(err);
+          if (err) {
+            dbConnect.destroy();
+          }
           return res.status(200).send({
             message: "Register successfully",
             success: true,
