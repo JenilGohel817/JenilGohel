@@ -11,7 +11,7 @@ const Project = () => {
   const fetchProject = async () => {
     try {
       const data = await axios.get(
-        `${process.env.REACT_APP_JGAPI_V1}/projet/projectGet`
+        `${process.env.REACT_APP_JGAPI_V1}/project/projectGet`
       );
       if (data?.success) {
         toast.success(data.message);
