@@ -122,7 +122,7 @@ const Contact = () => {
                     />
                   </div>
                   <div className="jg-pt30 jg-text-right">
-                    <button type="submit" className="jg-button">
+                    <button type="submit" className="jg-button" disabled={Form}>
                       {Form ? "Sending..." : "Send"}
                     </button>
                   </div>
