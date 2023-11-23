@@ -12,28 +12,41 @@ const contactCreate = async (req, res) => {
 
       const values = [[FirstName, LastName, Email, ProjectDetail]];
 
-      dbConnect.query(sqlEmail, [Email], function (err, results) {
-        if (err) {
-          console.log(err);
-        }
-        const count = results[0].count;
-        if (count > 0) {
-          res.status(404).send({
-            message: "Email already exists",
-            success: false,
-          });
-        } else {
-          dbConnect.query(sql, [values], function (err, results) {
-            if (err) {
-              console.log(err);
-            }
-            return res.status(200).send({
-              message: "We will get in touch with you soon",
-              success: true,
-              results,
-            });
-          });
-        }
+      const resultsEmail = await new Promise((resolve, reject) => {
+        dbConnect.query(sqlEmail, [Email], (err, results) => {
+          if (err) {
+            console.log(err);
+            reject(err);
+          } else {
+            resolve(results);
+          }
+        });
+      });
+
+      const count = resultsEmail[0].count;
+
+      if (count > 0) {
+        return res.status(404).send({
+          message: "Your submission has been received. We'll be in touch soon.",
+          success: false,
+        });
+      }
+
+      const resultsInsert = await new Promise((resolve, reject) => {
+        dbConnect.query(sql, [values], (err, results) => {
+          if (err) {
+            console.log(err);
+            reject(err);
+          } else {
+            resolve(results);
+          }
+        });
+      });
+
+      return res.status(200).send({
+        message: "We will get in touch with you soon",
+        success: true,
+        results: resultsInsert,
       });
     } else {
       return res.status(404).json({
@@ -42,6 +55,7 @@ const contactCreate = async (req, res) => {
       });
     }
   } catch (error) {
+    console.error(error);
     return res.status(404).send({
       message: "Form error",
       success: false,
