@@ -35,7 +35,17 @@ const Project = () => {
               <div className="jg-heading-subtitle">Projects</div>
               <h2>All Projects</h2>
             </div>
-            <div className={data?.data ? "jg-grid jg-grid-four" : ""}>
+            <div
+              className={
+                data?.data &&
+                data?.data?.results &&
+                data?.data?.results.length > 0 ? (
+                  <>`jg-grid jg-grid-four`</>
+                ) : (
+                  <></>
+                )
+              }
+            >
               {data?.data &&
               data?.data?.results &&
               data?.data?.results.length > 0 ? (

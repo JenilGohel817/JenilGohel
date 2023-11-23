@@ -27,7 +27,7 @@ const projectCreate = async (req, res) => {
 
     console.log(values);
 
-    dbConnect.query(sql, [values], function (error, results, fields) {
+    dbConnect.query(sql, [values], function (error, results) {
       if (error) {
         console.log(error);
       }
@@ -52,7 +52,7 @@ const projectGet = async (req, res) => {
     const sql =
       "SELECT Id, Slug, Thumbnail, Title, Category, Link FROM project";
 
-    dbConnect.query(sql, function (error, results, fields) {
+    dbConnect.query(sql, function (error, results) {
       if (error) {
         console.log(error);
       }
@@ -77,7 +77,7 @@ const projectGetSingleId = async (req, res) => {
 
     const sql = `SELECT Id, Slug, Thumbnail, Title, Category, Link FROM project WHERE Id=${id}`;
 
-    dbConnect.query(sql, function (error, results, fields) {
+    dbConnect.query(sql, function (error, results) {
       if (error) {
         console.log(error);
       }
@@ -102,7 +102,7 @@ const projectGetSingleSlug = async (req, res) => {
 
     const sql = `SELECT Id, Slug, Thumbnail, Title, Category, Link FROM project WHERE Slug = ?`;
 
-    dbConnect.query(sql, slug, function (error, results, fields) {
+    dbConnect.query(sql, slug, function (error, results) {
       if (error) {
         console.log(error);
       }
@@ -148,7 +148,7 @@ const projectUpdate = async (req, res) => {
     const sql = `UPDATE project SET  Slug = ?, Thumbnail = ?, Title = ?, Category = ?, Link = ? WHERE Id = ${Id}`;
     const values = [Slug, secure_url, Title, Category, Link];
 
-    dbConnect.query(sql, values, async function (error, results, fields) {
+    dbConnect.query(sql, values, async function (error, results) {
       if (error) {
         console.log(error);
       }
@@ -175,7 +175,7 @@ const projectDelete = async (req, res) => {
 
     const sql = `DELETE FROM project WHERE id=${id}`;
 
-    dbConnect.query(sql, function (error, results, fields) {
+    dbConnect.query(sql, function (error, results) {
       if (error) {
         console.log(error);
       }
