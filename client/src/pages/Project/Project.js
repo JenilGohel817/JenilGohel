@@ -36,27 +36,35 @@ const Project = () => {
               <h2>All Projects</h2>
             </div>
             <div className="jg-grid jg-grid-four">
-              {data?.data?.results?.map((el) => (
-                <div key={el.Id} className="jg-project-card-wrap">
-                  <Link
-                    to={el.Link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="jg-project-card"
-                  >
-                    <div className="jg-project-image-wrap">
-                      <img
-                        className="jg-project-image"
-                        src={el.Thumbnail}
-                        alt={el.Title}
-                      />
+              {data ? (
+                <>
+                  {data?.data?.results?.map((el) => (
+                    <div key={el.Id} className="jg-project-card-wrap">
+                      <Link
+                        to={el.Link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="jg-project-card"
+                      >
+                        <div className="jg-project-image-wrap">
+                          <img
+                            className="jg-project-image"
+                            src={el.Thumbnail}
+                            alt={el.Title}
+                          />
+                        </div>
+                        <div className="jg-project-hover"></div>
+                        <div className="jg-project-name">{el.Title}</div>
+                        <div className="jg-project-position">{el.Category}</div>
+                      </Link>
                     </div>
-                    <div className="jg-project-hover"></div>
-                    <div className="jg-project-name">{el.Title}</div>
-                    <div className="jg-project-position">{el.Category}</div>
-                  </Link>
-                </div>
-              ))}
+                  ))}
+                </>
+              ) : (
+                <>
+                  <div className="jg-experience-designation">Loading...</div>
+                </>
+              )}
             </div>
           </div>
         </section>
