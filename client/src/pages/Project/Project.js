@@ -39,11 +39,9 @@ const Project = () => {
               className={
                 data?.data &&
                 data?.data?.results &&
-                data?.data?.results.length > 0 ? (
-                  <>`jg-grid jg-grid-four`</>
-                ) : (
-                  <></>
-                )
+                data?.data?.results.length > 0
+                  ? "jg-grid jg-grid-four"
+                  : ""
               }
             >
               {data?.data &&
