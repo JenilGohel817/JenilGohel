@@ -52,15 +52,20 @@ const projectGet = async (req, res) => {
     const sql =
       "SELECT Id, Slug, Thumbnail, Title, Category, Link FROM project";
 
-    dbConnect.query(sql, function (error, results) {
-      if (error) {
-        console.log(error);
-      }
-      return res.status(200).send({
-        message: "Project fetched successfully",
-        success: true,
-        results,
+    const results = await new Promise((resolve, reject) => {
+      dbConnect.query(sql, function (error, results) {
+        if (error) {
+          console.log(error);
+          reject(error);
+        }
+        resolve(results);
       });
+    });
+
+    return res.status(200).send({
+      message: "Project fetched successfully",
+      success: true,
+      results,
     });
   } catch (error) {
     return res.status(404).send({
