@@ -35,10 +35,16 @@ const Project = () => {
               <div className="jg-heading-subtitle">Projects</div>
               <h2>All Projects</h2>
             </div>
-            <div className={ data?.data && data.data.results.length > 0 ? "jg-grid jg-grid-four" : "" }>
+            <div
+              className={
+                data?.data && data?.data?.results.length > 0
+                  ? "jg-grid jg-grid-four"
+                  : ""
+              }
+            >
               {data?.data &&
-              data.data.results &&
-              data.data.results.length > 0 ? (
+              data?.data?.results &&
+              data?.data?.results.length > 0 ? (
                 <>
                   {data.data.results.map((el) => (
                     <div key={el.Id} className="jg-project-card-wrap">
