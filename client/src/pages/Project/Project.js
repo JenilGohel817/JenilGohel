@@ -11,14 +11,14 @@ const Project = () => {
   const fetchProject = async () => {
     try {
       const data = await axios.get(
-        `${process.env.REACT_APP_JGAPI_V1}/project/projectGet`
+        `${process.env.REACT_APP_JGAPI_V1}/projet/projectGet`
       );
       if (data?.success) {
         toast.success(data.message);
       }
       setData(data);
     } catch (error) {
-      toast.error(error.message);
+      toast.error(error.response.data.message);
     }
   };
 
