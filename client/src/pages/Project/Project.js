@@ -36,7 +36,7 @@ const Project = () => {
               <h2>All Projects</h2>
             </div>
             <div className="jg-grid jg-grid-four">
-              {data ? (
+              {data?.data ? (
                 <>
                   {data?.data?.results?.map((el) => (
                     <div key={el.Id} className="jg-project-card-wrap">
