@@ -35,10 +35,18 @@ const Project = () => {
               <div className="jg-heading-subtitle">Projects</div>
               <h2>All Projects</h2>
             </div>
-            <div className="jg-grid jg-grid-four">
-              {data?.data ? (
+            <div
+              className={
+                data?.data && data.data.results.length > 0
+                  ? "jg-grid jg-grid-four"
+                  : ""
+              }
+            >
+              {data?.data &&
+              data.data.results &&
+              data.data.results.length > 0 ? (
                 <>
-                  {data?.data?.results?.map((el) => (
+                  {data.data.results.map((el) => (
                     <div key={el.Id} className="jg-project-card-wrap">
                       <Link
                         to={el.Link}
@@ -62,7 +70,11 @@ const Project = () => {
                 </>
               ) : (
                 <>
-                  <div className="jg-experience-designation">Loading...</div>
+                  <p className="jg-experience-designation">
+                    We're sorry, but the data you are looking for is not
+                    available at the moment.
+                  </p>
+                  <p>Loading...</p>
                 </>
               )}
             </div>
