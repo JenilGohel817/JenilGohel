@@ -74,7 +74,8 @@ const Project = () => {
                 <>
                   <p className="jg-experience-designation">
                     We're sorry, but the data you are looking for is not
-                    available at the moment.
+                    available at the moment. Please wait as we fetch the
+                    information for you.
                   </p>
                   <p>Loading...</p>
                 </>
