@@ -14,8 +14,8 @@ const Home = () => {
                 <span className="jg-span">Jenil Gohel</span> Software Developer
                 Engineer Based in India
               </h1>
-              <Link to className="jg-button">
-                Resume
+              <Link to={"/Project"} className="jg-button">
+                Projects
               </Link>
             </div>
             <div className="jg-hero-info jg-py">
