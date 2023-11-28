@@ -16,7 +16,6 @@ const Project = () => {
       if (data?.success) {
         toast.success(data.message);
       }
-      console.log(data);
       setData(data);
     } catch (error) {
       console.log(error);
