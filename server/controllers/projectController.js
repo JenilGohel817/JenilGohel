@@ -61,8 +61,6 @@ const projectGet = async (req, res) => {
       });
     });
 
-    console.log(results);
-
     return res.status(200).send({
       message: "Project fetched successfully",
       success: true,
