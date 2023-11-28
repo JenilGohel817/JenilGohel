@@ -12,7 +12,7 @@ const dbConnect = mysql2.createConnection({
   database: process.env.DB_DATABASE,
   port: process.env.DB_PORT,
   waitForConnections: true,
-  connectionLimit: 1,
+  connectionLimit: 10,
   queueLimit: 0,
 });
 
