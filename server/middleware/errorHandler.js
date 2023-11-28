@@ -16,4 +16,17 @@ const authenticateRole = (req, res, next) => {
   }
 };
 
+const auth = () => {
+  const token = req.headers("auth-token");
+
+  if (!token) {
+    return res.status(401).send({
+      message: "Access denied. Not authenticated...",
+    });
+  }
+
+  try {
+  } catch (error) {}
+};
+
 export default authenticateRole;

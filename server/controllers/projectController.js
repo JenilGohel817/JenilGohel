@@ -53,7 +53,7 @@ const projectGet = async (req, res) => {
       "SELECT Id, Slug, Thumbnail, Title, Category, Link FROM project";
 
     const results = await new Promise((resolve, reject) => {
-      dbConnect.query(sql, function (error, results) {
+      pool.query(sql, function (error, results) {
         if (error) {
           console.log(error);
           reject(error);
