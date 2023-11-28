@@ -55,7 +55,7 @@ const projectGet = async (req, res) => {
     const results = await new Promise((resolve, reject) => {
       dbConnect.query(sql, function (error, results) {
         if (error) {
-          console.log(error);
+          reject(error);
         }
         resolve(results);
       });
