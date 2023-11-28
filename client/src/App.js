@@ -1,4 +1,4 @@
-import { Route, Router } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home.js";
 import Contact from "./components/Contact/Contact.js";
 import Project from "./pages/Project/Project.js";
@@ -12,7 +12,7 @@ import ErrorPage from "./components/404.js";
 function App() {
   return (
     <>
-      <Router>
+      <Routes>
         <Route path={""} element={<Home />}></Route>
         <Route path={"/Admin"} element={<AdminHome />}></Route>
         <Route path={"/Admin/:slug"} element={<AdminUpdate />}></Route>
@@ -22,7 +22,7 @@ function App() {
         <Route path={"/Project"} element={<Project />}></Route>
         <Route path={"/AboutUs"} element={<AboutUs />}></Route>
         <Route path="*" element={<ErrorPage />}></Route>
-      </Router>
+      </Routes>
     </>
   );
 }
