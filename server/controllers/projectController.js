@@ -67,6 +67,7 @@ const projectGet = async (req, res) => {
       results,
     });
   } catch (error) {
+    console.log(error);
     return res.status(404).send({
       message: "Error fetching",
       success: false,
