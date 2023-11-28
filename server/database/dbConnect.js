@@ -23,13 +23,4 @@ dbConnect.connect(function (err) {
   }
 });
 
-dbConnect.on("error", (err) => {
-  if (err.code === "PROTOCOL_CONNECTION_LOST") {
-    console.error("Database connection was closed. Reconnecting...");
-    dbConnect.connect();
-  } else {
-    throw err;
-  }
-});
-
 export default dbConnect;
