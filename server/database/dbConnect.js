@@ -26,11 +26,7 @@ dbConnect.connect(function (err) {
 
 dbConnect.on("error", (err) => {
   console.error("Database error:", err);
-  if (err.state === "disconnected") {
-    console.log("Reconnecting to the database...");
-    dbConnect.connect();
-  }
-  if (err.code === "PROTOCOL_CONNECTION_LOST") {
+  if (err) {
     console.log("Reconnecting to the database...");
     dbConnect.connect();
   } else {
