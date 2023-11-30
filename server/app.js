@@ -1,7 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
 import helmet from "helmet";
-import dbConnect from "./database/dbConnect.js";
 import bodyParser from "body-parser";
 import cors from "cors";
 import morgan from "morgan";
@@ -13,13 +12,6 @@ const app = express();
 
 dotenv.config({
   path: "./private/.env",
-});
-
-dbConnect.connect(function (error) {
-  if (error) {
-    throw error;
-  }
-  console.log("SQL Connect!");
 });
 
 app.use(
