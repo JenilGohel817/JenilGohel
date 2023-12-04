@@ -16,23 +16,26 @@ const dbConnect = mysql2.createConnection({
   queueLimit: 0,
 });
 
-dbConnect.connect(function (err) {
-  if (err) {
-    console.log(`connectionRequest Failed ${err.stack}`);
-  } else {
-    console.log(`DB connectionRequest Successful ${dbConnect.threadId}`);
-  }
-});
+handleDisconnect();
 
 dbConnect.on("error", (err) => {
   console.error("Database error:", err);
-
   if (err.code === "PROTOCOL_CONNECTION_LOST") {
     console.log("Reconnecting to the database...");
-    dbConnect.connect();
+    handleDisconnect();
   } else {
     throw err;
   }
 });
+
+function handleDisconnect() {
+  dbConnect.connect(function (err) {
+    if (err) {
+      console.log(`connectionRequest Failed`);
+    } else {
+      console.log(`DB connectionRequest Successful`);
+    }
+  });
+}
 
 export default dbConnect;
