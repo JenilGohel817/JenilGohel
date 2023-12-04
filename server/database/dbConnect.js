@@ -30,12 +30,15 @@ dbConnect.on("close", (err) => {
 
 handleDisconnect();
 
+if (dbConnect && dbConnect.state === "disconnected") {
+  console.log("The connection is disconnected.");
+  handleDisconnect();
+} else {
+  console.log("The connection is active.");
+}
+
 dbConnect.on("error", (err) => {
   console.error("Database error:", err);
-  if (dbConnect.state === "disconnected") {
-    console.log("Reconnecting to the database for disconnected...");
-    handleDisconnect();
-  }
   if (err.code === "PROTOCOL_CONNECTION_LOST") {
     console.log("Reconnecting to the database...");
     handleDisconnect();
