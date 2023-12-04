@@ -39,14 +39,14 @@ const Project = () => {
               className={
                 data?.data &&
                 data?.data?.results &&
-                data?.data?.results.length > 0
+                data?.data?.results?.length > 0
                   ? "jg-grid jg-grid-four"
                   : ""
               }
             >
               {data?.data &&
               data?.data?.results &&
-              data?.data?.results.length > 0 ? (
+              data?.data?.results?.length > 0 ? (
                 <>
                   {data.data.results.map((el) => (
                     <div key={el.Id} className="jg-project-card-wrap">

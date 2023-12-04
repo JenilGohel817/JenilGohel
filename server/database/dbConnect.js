@@ -16,10 +16,26 @@ const dbConnect = mysql2.createConnection({
   queueLimit: 0,
 });
 
+dbConnect.on("connect", () => {
+  console.log("Connected to the database!");
+});
+
+dbConnect.on("end", () => {
+  console.log("Connection to the database ended.");
+});
+
+dbConnect.on("close", (err) => {
+  console.log("Connection to the database closed.", err);
+});
+
 handleDisconnect();
 
 dbConnect.on("error", (err) => {
   console.error("Database error:", err);
+  if (dbConnect.state === "disconnected") {
+    console.log("Reconnecting to the database for disconnected...");
+    handleDisconnect();
+  }
   if (err.code === "PROTOCOL_CONNECTION_LOST") {
     console.log("Reconnecting to the database...");
     handleDisconnect();
