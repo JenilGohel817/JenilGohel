@@ -5,6 +5,7 @@ import { cloudinary } from "../middleware/fileUpload.js";
 const blogAdd = async (req, res) => {
   try {
     const { name, description, author, status } = req.body;
+
     const thumbnail = req.file.originalname;
     const slug = slugify(name);
     const publicationDate = new Date();

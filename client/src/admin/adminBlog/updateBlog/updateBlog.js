@@ -15,7 +15,6 @@ const UpdateBlog = () => {
   const [author, setAuthor] = useState("");
   const [status, setStatus] = useState("");
   const navigate = useNavigate();
-
   const params = useParams();
 
   const getProject = async () => {
