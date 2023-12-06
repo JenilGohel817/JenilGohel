@@ -34,57 +34,76 @@ const BlogDetail = () => {
       <Layout>
         <section className="jg-section">
           <div className="jg-container">
-            {data?.data?.results.map((el) => (
+            <div className="jg-heading-wrap">
+              <div className="jg-heading-subtitle">Blog</div>
+              <h2>
+                {data?.data?.results.map((el) => (
+                  <>{el.name}</>
+                ))}
+              </h2>
+            </div>
+            {data?.data &&
+            data?.data?.results &&
+            data?.data?.results?.length > 0 ? (
               <>
-                <div key={el.id}>
-                  <div className="jg-heading-wrap">
-                    <div className="jg-heading-subtitle">Blog Detail</div>
-                    <h2>{el.name}</h2>
-                  </div>
-                  <div className="jg-heading-wrap">
-                    <Link to={"/blog"} className="back-to-blog">
-                      🔙 Blog
-                    </Link>
-                  </div>
-                  <div className="jg-about-wrapper">
-                    <div className="jg-about-flex">
-                      <div className="jg-about-flex-item jg-about-flex-item-first">
-                        <div className="jg-about-box">
-                          <div className="jg-about-box-image-wrap">
-                            <img
-                              className="jg-about-box-image"
-                              src={el.thumbnail}
-                              alt="Jenil Gohel"
-                            />
-                          </div>
-                        </div>
+                {data?.data?.results.map((el) => (
+                  <>
+                    <div key={el.id}>
+                      <div className="jg-heading-wrap">
+                        <Link to={"/blog"} className="back-to-blog">
+                          🔙 Blog
+                        </Link>
                       </div>
-                      <div className="jg-about-flex-item jg-about-flex-item-last">
-                        <h2 className="jg-about-heading jg-about-heading-first">
-                          Blog Information
-                        </h2>
-                        <div className="jg-experience">
-                          <div className="jg-experience-wrap">
-                            <div className="jg-experience-year">
-                              {el.publicationDate}
+                      <div className="jg-about-wrapper">
+                        <div className="jg-about-flex">
+                          <div className="jg-about-flex-item jg-about-flex-item-first">
+                            <div className="jg-about-box">
+                              <div className="jg-about-box-image-wrap">
+                                <img
+                                  className="jg-about-box-image"
+                                  src={el.thumbnail}
+                                  alt="Jenil Gohel"
+                                />
+                              </div>
                             </div>
-                            <div className="jg-experience-designation">
-                              {el.author}
+                          </div>
+                          <div className="jg-about-flex-item jg-about-flex-item-last">
+                            <h2 className="jg-about-heading jg-about-heading-first">
+                              Blog Information
+                            </h2>
+                            <div className="jg-experience">
+                              <div className="jg-experience-wrap">
+                                <div className="jg-experience-year">
+                                  {el.publicationDate}
+                                </div>
+                                <div className="jg-experience-designation">
+                                  {el.author}
+                                </div>
+                                <div className="jg-experience-company">
+                                  {el.name}
+                                </div>
+                                <p className="jg-experience-info">
+                                  {el.description}
+                                </p>
+                              </div>
                             </div>
-                            <div className="jg-experience-company">
-                              {el.name}
-                            </div>
-                            <p className="jg-experience-info">
-                              {el.description}
-                            </p>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </>
+                ))}
               </>
-            ))}
+            ) : (
+              <>
+                <p className="jg-experience-designation">
+                  We're sorry, but the data you are looking for is not available
+                  at the moment. Please wait as we fetch the information for
+                  you.
+                </p>
+                <p>Loading...</p>
+              </>
+            )}
           </div>
         </section>
       </Layout>
