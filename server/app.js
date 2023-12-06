@@ -7,6 +7,7 @@ import morgan from "morgan";
 import contactRouter from "./routers/contactRouter.js";
 import projectRouter from "./routers/projectRouter.js";
 import authRouter from "./routers/authRouter.js";
+import blogRouter from "./routers/blogRouter.js";
 const PORT = process.env.PORT || 8080;
 const app = express();
 
@@ -28,6 +29,7 @@ app.use(morgan("dev"));
 app.use("/api/v1/contact", contactRouter);
 app.use("/api/v1/project", projectRouter);
 app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/blog", blogRouter);
 
 app.listen(PORT, () => {
   console.log(`Server Started !`);

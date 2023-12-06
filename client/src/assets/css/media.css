@@ -3,11 +3,13 @@
         max-width: 550px;
         height: 650px;
     }
-    .jg-grid-four {
+    .jg-grid-four, .jg-grid-two {
         grid-column-gap: 10px;
         grid-row-gap: 10px;
         grid: auto / 1fr 1fr 1fr;
     }
+
+    
 }
 
 @media (max-width: 1024px) {
@@ -17,7 +19,7 @@
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }   
-    .jg-grid-four {
+    .jg-grid-four, .jg-grid-two {
         grid: auto / 1fr 1fr;
         grid-column-gap: 10px;
         grid-row-gap: 10px;
@@ -104,7 +106,7 @@
       .jg-project-card {
         height: 250px;
     }
-    .jg-grid-four {
+    .jg-grid-four, .jg-grid-two {
         grid: auto / 1fr;
         grid-column-gap: 10px;
         grid-row-gap: 10px;

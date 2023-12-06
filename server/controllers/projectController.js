@@ -25,8 +25,6 @@ const projectCreate = async (req, res) => {
       "INSERT INTO project(Slug, Thumbnail, Title, Category, Link) VALUES ?";
     const values = [[Slug, secure_url, Title, Category, Link]];
 
-    console.log(values);
-
     dbConnect.query(sql, [values], function (error, results) {
       if (error) {
         console.log(error);
@@ -157,7 +155,6 @@ const projectUpdate = async (req, res) => {
       if (error) {
         console.log(error);
       }
-      console.log("test 5 ===>", results);
       return res.status(200).send({
         message: "Project successfully updated",
         success: true,

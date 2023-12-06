@@ -61,16 +61,25 @@ const Header = () => {
                     <Link
                       className="jg-header-link"
                       onClick={MenuHeaderClick}
-                      to={"/Project"}
+                      to={"/blog"}
                     >
-                      Projects
+                      Blog
                     </Link>
                   </li>
                   <li>
                     <Link
                       className="jg-header-link"
                       onClick={MenuHeaderClick}
-                      to={"/AboutUs"}
+                      to={"/project"}
+                    >
+                      Project
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="jg-header-link"
+                      onClick={MenuHeaderClick}
+                      to={"/aboutus"}
                     >
                       About Us
                     </Link>
@@ -79,7 +88,7 @@ const Header = () => {
                     <Link
                       className="jg-header-link"
                       onClick={MenuHeaderClick}
-                      to={"/ContactUs"}
+                      to={"/contactus"}
                     >
                       Contect Us
                     </Link>

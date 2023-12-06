@@ -171,3 +171,9 @@
     grid-row-gap: 10px;
     grid: auto / 1fr 1fr 1fr 1fr;
 }
+
+.jg-grid-two {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid: auto / 1fr 1fr;
+}
