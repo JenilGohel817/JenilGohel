@@ -53,8 +53,6 @@ const UpdateBlog = () => {
       formData.append("author", author);
       formData.append("status", status);
 
-      console.log(slug);
-
       const { data } = await axios.put(
         `${process.env.REACT_APP_JGAPI_V1}/blog/edit/${slug}`,
         formData

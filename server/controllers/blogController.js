@@ -21,8 +21,6 @@ const blogAdd = async (req, res) => {
     const url = Thumbnail_cloudinary_Url;
     const secure_url = url.secure_url;
 
-    console.log(secure_url);
-
     if (!name || !description || !author || !status) {
       return res.status(400).send({
         message: "All fields are required",
@@ -47,7 +45,6 @@ const blogAdd = async (req, res) => {
       if (error) {
         console.log(error);
       }
-      console.log(results);
       return res.status(200).send({
         message: "blog added successfully",
         success: true,

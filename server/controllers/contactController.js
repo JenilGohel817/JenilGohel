@@ -75,7 +75,6 @@ const contactFind = async (req, res) => {
         success: true,
         results,
       });
-      console.log(results);
     });
   } catch (error) {
     return res.status(404).send({
@@ -86,15 +85,15 @@ const contactFind = async (req, res) => {
 };
 
 const contactFindSingle = async (req, res) => {
-  console.log("Jenil");
+  console.log("");
 };
 
 const contactDelete = async (req, res) => {
-  console.log("Jenil");
+  console.log("");
 };
 
 const contactUpdate = async (req, res) => {
-  console.log("Jenil");
+  console.log("");
 };
 
 export {

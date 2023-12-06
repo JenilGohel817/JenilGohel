@@ -36,7 +36,6 @@ const projectCreate = async (req, res) => {
       });
     });
   } catch (error) {
-    console.log(error);
     return res.status(404).send({
       message: "Error project",
       success: false,
@@ -162,7 +161,6 @@ const projectUpdate = async (req, res) => {
       });
     });
   } catch (error) {
-    console.log(error);
     return res.status(404).send({
       message: "Error updating",
       success: false,

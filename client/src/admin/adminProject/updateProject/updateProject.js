@@ -51,14 +51,10 @@ const UpdateProject = () => {
       formData.append("Thumbnail", newThumbnail);
       formData.append("Link", link);
 
-      console.log(formData);
-
       const { data } = await axios.put(
         `${process.env.REACT_APP_JGAPI_V1}/project/projectUpdate/${id}`,
         formData
       );
-
-      console.log(data);
 
       if (data.success) {
         setLoad(false);
