@@ -22,6 +22,7 @@ dbConnect.on("connect", () => {
 
 dbConnect.on("end", () => {
   console.log("Connection to the database ended.");
+  dbConnect.end();
 });
 
 dbConnect.on("close", (err) => {
