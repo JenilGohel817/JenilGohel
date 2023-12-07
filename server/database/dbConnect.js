@@ -27,6 +27,7 @@ dbConnect.on("end", () => {
 
 dbConnect.on("close", (err) => {
   console.log("Connection to the database closed.", err);
+  handleDisconnect();
 });
 
 handleDisconnect();
