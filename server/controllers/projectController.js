@@ -4,26 +4,27 @@ import { cloudinary } from "../middleware/fileUpload.js";
 
 const projectCreate = async (req, res) => {
   try {
-    const { Title, Category, Link } = req.body;
+    const { title, category, link } = req.body;
 
-    const Thumbnail = req.file.originalname;
+    const thumbnail = req.file.originalname;
 
-    const Thumbnail_cloudinary_Url = await cloudinary.uploader.upload(
-      `uploads/${Thumbnail}`,
+    console.log(thumbnail);
+
+    const thumbnail_cloudinary_Url = await cloudinary.uploader.upload(
+      `uploads/${thumbnail}`,
       {
         folder: "projects",
         use_filename: true,
       }
     );
-
-    const url = Thumbnail_cloudinary_Url;
+    const url = thumbnail_cloudinary_Url;
     const secure_url = url.secure_url;
 
-    const Slug = slugify(Title);
+    const slug = slugify(title);
 
     const sql =
-      "INSERT INTO project(Slug, Thumbnail, Title, Category, Link) VALUES ?";
-    const values = [[Slug, secure_url, Title, Category, Link]];
+      "INSERT INTO project(slug, thumbnail, title, category, link) VALUES ?";
+    const values = [[slug, secure_url, title, category, link]];
 
     dbConnect.query(sql, [values], function (error, results) {
       if (error) {
@@ -47,7 +48,7 @@ const projectCreate = async (req, res) => {
 const projectGet = async (req, res) => {
   try {
     const sql =
-      "SELECT Id, Slug, Thumbnail, Title, Category, Link FROM project";
+      "SELECT id, slug, thumbnail, title, category, link FROM project";
 
     const results = await new Promise((resolve, reject) => {
       dbConnect.query(sql, function (error, results) {
@@ -77,7 +78,7 @@ const projectGetSingleId = async (req, res) => {
   try {
     const id = req.params.id;
 
-    const sql = `SELECT Id, Slug, Thumbnail, Title, Category, Link FROM project WHERE Id=${id}`;
+    const sql = `SELECT id, slug, thumbnail, title, category, link FROM project WHERE id=${id}`;
 
     dbConnect.query(sql, function (error, results) {
       if (error) {
@@ -102,7 +103,7 @@ const projectGetSingleSlug = async (req, res) => {
   try {
     const slug = req.params.slug;
 
-    const sql = `SELECT Id, Slug, Thumbnail, Title, Category, Link FROM project WHERE Slug = ?`;
+    const sql = `SELECT id, slug, thumbnail, title, category, link FROM project WHERE slug = ?`;
 
     dbConnect.query(sql, slug, function (error, results) {
       if (error) {
@@ -125,30 +126,30 @@ const projectGetSingleSlug = async (req, res) => {
 
 const projectUpdate = async (req, res) => {
   try {
-    const Id = req.params.id;
+    const id = req.params.id;
 
-    const { Title, Category, Link } = req.body;
+    const { title, category, link } = req.body;
 
-    let Thumbnail;
+    let thumbnail;
 
     if (req.file !== undefined && req.file.filename !== undefined) {
-      Thumbnail = req.file.originalname;
+      thumbnail = req.file.originalname;
     }
 
-    const Thumbnail_cloudinary_Url = await cloudinary.uploader.upload(
-      `uploads/${Thumbnail}`,
+    const thumbnail_cloudinary_Url = await cloudinary.uploader.upload(
+      `uploads/${thumbnail}`,
       {
         folder: "projects",
       }
     );
 
-    const url = Thumbnail_cloudinary_Url;
+    const url = thumbnail_cloudinary_Url;
     const secure_url = url.secure_url;
 
-    const Slug = slugify(Title);
+    const slug = slugify(title);
 
-    const sql = `UPDATE project SET  Slug = ?, Thumbnail = ?, Title = ?, Category = ?, Link = ? WHERE Id = ${Id}`;
-    const values = [Slug, secure_url, Title, Category, Link];
+    const sql = `UPDATE project SET slug = ?, thumbnail = ?, title = ?, category = ?, link = ? WHERE id = ${id}`;
+    const values = [slug, secure_url, title, category, link];
 
     dbConnect.query(sql, values, async function (error, results) {
       if (error) {

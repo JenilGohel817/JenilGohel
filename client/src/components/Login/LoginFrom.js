@@ -32,7 +32,8 @@ const LoginFrom = () => {
         navigate("/");
       }
     } catch (error) {
-      toast.error(error.message);
+      setLoading(false);
+      toast.error(error.response.data.message);
     }
   };
 

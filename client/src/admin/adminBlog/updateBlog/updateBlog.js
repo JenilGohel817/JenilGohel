@@ -65,6 +65,7 @@ const UpdateBlog = () => {
       }
     } catch (error) {
       console.log(error);
+      setLoad(false);
     }
   };
 

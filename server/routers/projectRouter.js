@@ -10,13 +10,13 @@ import {
 import { upload } from "../middleware/fileUpload.js";
 const router = express.Router();
 
-router.post("/projectCreate", upload.single("Thumbnail"), projectCreate);
+router.post("/projectCreate", upload.single("thumbnail"), projectCreate);
 
 router.get("/projectGet", projectGet);
 
 router.delete("/projectDelete/:id", projectDelete);
 
-router.put("/projectUpdate/:id", upload.single("Thumbnail"), projectUpdate);
+router.put("/projectUpdate/:id", upload.single("thumbnail"), projectUpdate);
 
 router.get("/projectGetSingleId/:id", projectGetSingleId);
 

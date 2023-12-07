@@ -25,11 +25,11 @@ const UpdateProject = () => {
       if (data.success) {
         toast.success(data.message);
       }
-      setId(data?.data?.results[0].Id);
-      setTitle(data?.data?.results[0].Title);
-      setCategory(data?.data?.results[0].Category);
-      setThumbnail(data?.data?.results[0].Thumbnail);
-      setLink(data?.data?.results[0].Link);
+      setId(data?.data?.results[0].id);
+      setTitle(data?.data?.results[0].title);
+      setCategory(data?.data?.results[0].category);
+      setThumbnail(data?.data?.results[0].thumbnail);
+      setLink(data?.data?.results[0].link);
     } catch (error) {
       console.log(error);
     }
@@ -46,10 +46,10 @@ const UpdateProject = () => {
     setLoad(true);
     try {
       const formData = new FormData();
-      formData.append("Title", title);
-      formData.append("Category", category);
-      formData.append("Thumbnail", newThumbnail);
-      formData.append("Link", link);
+      formData.append("title", title);
+      formData.append("category", category);
+      formData.append("thumbnail", newThumbnail);
+      formData.append("link", link);
 
       const { data } = await axios.put(
         `${process.env.REACT_APP_JGAPI_V1}/project/projectUpdate/${id}`,
@@ -59,7 +59,7 @@ const UpdateProject = () => {
       if (data.success) {
         setLoad(false);
         toast.success(data.message);
-        navigate("/admin");
+        navigate("/addproject");
       }
     } catch (error) {
       console.log(error);
@@ -90,26 +90,26 @@ const UpdateProject = () => {
                 >
                   <div className="form-grid">
                     <div className="form-grid-item">
-                      <label htmlFor="Thumbnail" className="input-label">
+                      <label htmlFor="thumbnail" className="input-label">
                         Thumbnail *
                       </label>
                       <input
                         className="form-input"
                         type="file"
-                        name="Thumbnail"
+                        name="thumbnail"
                         onChange={FileUpload}
                         placeholder="Upload Thumbnail"
                         required
                       />
                     </div>
                     <div className="form-grid-item">
-                      <label htmlFor="Title" className="input-label">
+                      <label htmlFor="title" className="input-label">
                         Title *
                       </label>
                       <input
                         className="form-input"
                         type="text"
-                        name="Title"
+                        name="title"
                         value={title}
                         onChange={(e) => {
                           setTitle(e.target.value);
@@ -121,12 +121,12 @@ const UpdateProject = () => {
                   </div>
                   <div className="form-grid jg-pt30">
                     <div className="form-grid-item">
-                      <label htmlFor="Category" className="input-label">
+                      <label htmlFor="category" className="input-label">
                         Category *
                       </label>
                       <input
                         className="form-input"
-                        name="Category"
+                        name="category"
                         value={category}
                         onChange={(e) => {
                           setCategory(e.target.value);
@@ -137,7 +137,7 @@ const UpdateProject = () => {
                       />
                     </div>
                     <div className="form-grid-item">
-                      <label htmlFor="Link" className="input-label">
+                      <label htmlFor="link" className="input-label">
                         Link
                       </label>
                       <input
@@ -147,7 +147,7 @@ const UpdateProject = () => {
                         onChange={(e) => {
                           setLink(e.target.value);
                         }}
-                        name="Link"
+                        name="link"
                         placeholder="Link"
                         required
                       />

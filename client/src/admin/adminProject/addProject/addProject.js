@@ -16,10 +16,10 @@ const AddProject = () => {
   const createProject = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("Title", title);
-    formData.append("Thumbnail", thumbnail);
-    formData.append("Category", category);
-    formData.append("Link", link);
+    formData.append("title", title);
+    formData.append("thumbnail", thumbnail);
+    formData.append("category", category);
+    formData.append("link", link);
 
     setLoad(true);
 
@@ -35,6 +35,7 @@ const AddProject = () => {
         fetchProject();
       }
     } catch (error) {
+      setLoad(false);
       toast.error(error.message);
     }
   };
@@ -88,27 +89,27 @@ const AddProject = () => {
               >
                 <div className="form-grid">
                   <div className="form-grid-item">
-                    <label htmlFor="Thumbnail" className="input-label">
+                    <label htmlFor="thumbnail" className="input-label">
                       Thumbnail *
                     </label>
                     <input
                       className="form-input"
                       onChange={(e) => setThumbnail(e.target.files[0])}
                       type="file"
-                      name="Thumbnail"
+                      name="thumbnail"
                       placeholder="Upload Thumbnail"
                       required
                     />
                   </div>
                   <div className="form-grid-item">
-                    <label htmlFor="Title" className="input-label">
+                    <label htmlFor="title" className="input-label">
                       Title *
                     </label>
                     <input
                       className="form-input"
                       type="text"
                       value={title}
-                      name="Title"
+                      name="title"
                       onChange={(e) => {
                         setTitle(e.target.value);
                       }}
@@ -119,12 +120,12 @@ const AddProject = () => {
                 </div>
                 <div className="form-grid jg-pt30">
                   <div className="form-grid-item">
-                    <label htmlFor="Category" className="input-label">
+                    <label htmlFor="category" className="input-label">
                       Category *
                     </label>
                     <input
                       className="form-input"
-                      name="Category"
+                      name="category"
                       value={category}
                       onChange={(e) => {
                         setCategory(e.target.value);
@@ -135,7 +136,7 @@ const AddProject = () => {
                     />
                   </div>
                   <div className="form-grid-item">
-                    <label htmlFor="Link" className="input-label">
+                    <label htmlFor="link" className="input-label">
                       Link
                     </label>
                     <input
@@ -145,7 +146,7 @@ const AddProject = () => {
                       onChange={(e) => {
                         setLink(e.target.value);
                       }}
-                      name="Link"
+                      name="link"
                       placeholder="Link"
                       required
                     />
@@ -165,22 +166,22 @@ const AddProject = () => {
         <div className="jg-container">
           <div className="jg-grid jg-grid-four">
             {data?.data?.results?.map((el) => (
-              <div key={el.Id} className="jg-project-card-wrap">
+              <div key={el.id} className="jg-project-card-wrap">
                 <div className="jg-project-card">
                   <div className="jg-project-image-wrap">
                     <img
                       className="jg-project-image"
-                      src={el.Thumbnail}
-                      alt={el.Title}
+                      src={el.thumbnail}
+                      alt={el.title}
                     />
                   </div>
                   <div className="jg-project-hover"></div>
-                  <div className="jg-project-name">{el.Title}</div>
-                  <div className="jg-project-position">{el.Category}</div>
+                  <div className="jg-project-name">{el.title}</div>
+                  <div className="jg-project-position">{el.category}</div>
                 </div>
                 <div className="jg-project-button-wrap">
                   <Link
-                    to={`/admin/${el.Slug}`}
+                    to={`/updateproject/${el.slug}`}
                     className="jg-button jg-project-button"
                   >
                     Edit
@@ -189,7 +190,7 @@ const AddProject = () => {
                     className="jg-button jg-project-button"
                     onClick={(e) => {
                       e.preventDefault();
-                      projectDelete(el.Id);
+                      projectDelete(el.id);
                     }}
                   >
                     Delete

@@ -15,13 +15,13 @@ const Contact = () => {
     e.preventDefault();
 
     try {
+      setForm(true);
       const contactForm = {
         FirstName: FirstName,
         LastName: LastName,
         Email: Email,
         ProjectDetail: ProjectDetail,
       };
-      setForm(true);
 
       await axios
         .post(
@@ -29,15 +29,16 @@ const Contact = () => {
           contactForm
         )
         .then((data) => {
+          setForm(false);
           toast.success(data.data.message);
         })
         .catch((error) => {
           toast.error(error.response.data.message);
+          setForm(false);
         });
-
-      setForm(false);
     } catch (error) {
       if (error) throw error;
+      setForm(false);
       toast.error(error);
     }
   };

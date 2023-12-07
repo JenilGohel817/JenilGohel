@@ -49,9 +49,9 @@ const Project = () => {
               data?.data?.results?.length > 0 ? (
                 <>
                   {data.data.results.map((el) => (
-                    <div key={el.Id} className="jg-project-card-wrap">
+                    <div key={el.id} className="jg-project-card-wrap">
                       <Link
-                        to={el.Link}
+                        to={el.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="jg-project-card"
@@ -59,13 +59,13 @@ const Project = () => {
                         <div className="jg-project-image-wrap">
                           <img
                             className="jg-project-image"
-                            src={el.Thumbnail}
-                            alt={el.Title}
+                            src={el.thumbnail}
+                            alt={el.title}
                           />
                         </div>
                         <div className="jg-project-hover"></div>
-                        <div className="jg-project-name">{el.Title}</div>
-                        <div className="jg-project-position">{el.Category}</div>
+                        <div className="jg-project-name">{el.title}</div>
+                        <div className="jg-project-position">{el.category}</div>
                       </Link>
                     </div>
                   ))}

@@ -37,6 +37,7 @@ const AddBlog = () => {
         fetchBlog();
       }
     } catch (error) {
+      setLoad(false);
       toast.error(error.message);
     }
   };
