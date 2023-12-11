@@ -84,9 +84,9 @@ const AboutUs = () => {
                       >
                         Gmail
                       </Link>
-                      <Link className="jg-button jg-w100" to={"/ContactUs"}>
-                        Contact Us
-                      </Link>
+                      <a className="jg-button jg-w100" href="tel:9054048791">
+                        Contact Me
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -166,13 +166,13 @@ const AboutUs = () => {
                       <div className="jg-experience-company">
                         Evol Technobits Digital Pvt. Ltd.
                       </div>
-                      <p className="jg-experience-info-list">
+                      <div className="jg-experience-info-list">
                         <ul>
                           <li>Team Leadership</li>
                           <li>Team Building</li>
                           <li>Team Management</li>
                         </ul>
-                      </p>
+                      </div>
                     </div>
                     <div className="jg-experience-wrap">
                       <div className="jg-experience-year">
