@@ -14,11 +14,11 @@ const Blog = () => {
         `${process.env.REACT_APP_JGAPI_V1}/blog/read`
       );
       if (data?.success) {
-        toast.success(data.message);
+        toast.success(data?.message);
       }
       setData(data);
     } catch (error) {
-      toast.error(error.response.data.message);
+      toast.error(error?.response?.data?.message);
     }
   };
 
@@ -48,7 +48,7 @@ const Blog = () => {
               data?.data?.results &&
               data?.data?.results?.length > 0 ? (
                 <>
-                  {data.data.results.map((el) => (
+                  {data?.data?.results.map((el) => (
                     <div key={el.id} className="jg-project-card-wrap">
                       <Link
                         to={el.slug}

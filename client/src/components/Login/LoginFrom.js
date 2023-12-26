@@ -28,6 +28,7 @@ const LoginFrom = () => {
 
       if (data) {
         setLoading(false);
+        localStorage.setItem("JG", "Jenil Gohel");
         toast.success(data.message);
         navigate("/");
       }
