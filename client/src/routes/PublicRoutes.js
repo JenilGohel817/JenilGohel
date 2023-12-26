@@ -34,7 +34,8 @@ function PublicRoutes() {
                   path={"updateblog/:slug"}
                   element={<UpdateBlog />}
                 ></Route>
-                <Route path={"/register"} element={<RegisterFrom />}></Route>
+                <Route path={"register"} element={<RegisterFrom />}></Route>
+                <Route path="*" element={<ErrorPage />}></Route>
               </Routes>
             </ProtectRoutes>
           }
