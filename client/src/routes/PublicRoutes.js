@@ -34,21 +34,17 @@ function PublicRoutes() {
                   path={"updateblog/:slug"}
                   element={<UpdateBlog />}
                 ></Route>
+                <Route path={"/register"} element={<RegisterFrom />}></Route>
               </Routes>
             </ProtectRoutes>
           }
         />
-
         <Route path={"/login"} element={<LoginFrom />}></Route>
-        <Route path={"/register"} element={<RegisterFrom />}></Route>
-
         <Route path={"/contactus"} element={<Contact />}></Route>
         <Route path={"/project"} element={<Project />}></Route>
         <Route path={"/aboutus"} element={<AboutUs />}></Route>
-
         <Route path={"/blog"} element={<Blog />}></Route>
         <Route path={"/blog/:slug"} element={<BlogDetail />}></Route>
-
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
     </>
