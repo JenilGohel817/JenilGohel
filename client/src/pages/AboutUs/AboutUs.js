@@ -286,34 +286,28 @@ const AboutUs = () => {
                   <h2 className="jg-about-heading">SKILLS</h2>
                   <div className="jg-skills-wrap">
                     <div className="jg-skills">
-                      <span className="jg-skills-percent">85%</span>
+                      <span className="jg-skills-percent">80%</span>
                       <h3 className="jg-skills-name">JavaScript</h3>
-                      <p>Non enim praesent</p>
                     </div>
                     <div className="jg-skills">
-                      <span className="jg-skills-percent">50%</span>
+                      <span className="jg-skills-percent">35%</span>
                       <h3 className="jg-skills-name">Python</h3>
-                      <p>Non enim praesent</p>
                     </div>
                     <div className="jg-skills">
-                      <span className="jg-skills-percent">85%</span>
+                      <span className="jg-skills-percent">75%</span>
                       <h3 className="jg-skills-name">ReactJs</h3>
-                      <p>Non enim praesent</p>
                     </div>
                     <div className="jg-skills">
-                      <span className="jg-skills-percent">85%</span>
+                      <span className="jg-skills-percent">75%</span>
                       <h3 className="jg-skills-name">NodeJs</h3>
-                      <p>Non enim praesent</p>
                     </div>
                     <div className="jg-skills">
-                      <span className="jg-skills-percent">85%</span>
+                      <span className="jg-skills-percent">70%</span>
                       <h3 className="jg-skills-name">MySql</h3>
-                      <p>Non enim praesent</p>
                     </div>
                     <div className="jg-skills">
-                      <span className="jg-skills-percent">85%</span>
+                      <span className="jg-skills-percent">70%</span>
                       <h3 className="jg-skills-name">MongoDB</h3>
-                      <p>Non enim praesent</p>
                     </div>
                   </div>
                   <h2 className="jg-about-heading">PROJECTS</h2>
