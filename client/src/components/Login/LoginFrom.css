@@ -2,3 +2,10 @@
     margin: 0 auto;
     max-width: 450px;
 }
+
+.google-login {
+    color: var(--jg-white);
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+}

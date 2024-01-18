@@ -14,6 +14,7 @@ const Layout = ({ children }) => {
     setTimeout(() => {
       Setloading(true);
     });
+    // eslint-disable-next-line
   }, []);
 
   return (

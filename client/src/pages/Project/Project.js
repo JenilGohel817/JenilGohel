@@ -24,7 +24,9 @@ const Project = () => {
 
   useEffect(() => {
     fetchProject();
-  });
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <>
       <Layout>

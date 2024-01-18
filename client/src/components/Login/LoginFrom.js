@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Layout from "../../layouts/Layout.js";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./LoginFrom.css";
 
 const LoginFrom = () => {
@@ -84,6 +84,11 @@ const LoginFrom = () => {
                       placeholder="Password"
                       required
                     />
+                  </div>
+                  <div className="jg-pt30 jg-text-right">
+                    <Link to={"/login/google"} className="google-login">
+                      Sign in with Google
+                    </Link>
                   </div>
                   <div className="jg-pt30 jg-text-right">
                     <button type="submit" className="jg-button">
