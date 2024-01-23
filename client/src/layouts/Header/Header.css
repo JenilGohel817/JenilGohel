@@ -29,7 +29,7 @@
     margin-right: 5px;
     display: inline-block;
     padding: 8px 30px;
-    transition: background .2s ease-in-out 0s;
+    transition: background 0.5s ease-in-out 0s;
     position: relative;
 }
 
@@ -60,7 +60,7 @@
   
   .jg-header-menu-icon {
     display: none;
-    transition: display 0.ms ease-in-out 0s;
+    transition: display 0.5s ease-in-out 0s;
     margin-left: auto;
     position: relative;
     height: 50px;

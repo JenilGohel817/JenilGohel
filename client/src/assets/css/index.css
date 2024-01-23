@@ -286,7 +286,7 @@ p {
   cursor: pointer;
   border-style: none;
   display: inline-block;
-  transition: background 0.2s ease-in-out 0s;
+  transition: background 0.5s ease-in-out 0s;
 }
 
 .jg-button:hover {
@@ -344,7 +344,7 @@ p {
   margin: 0 10px;
   width: calc(100% - 20px);
   max-width: 100%;
-  transition: bottom 0.2s ease-in-out 0s;
+  transition: bottom 0.5s ease-in-out 0s;
   border: 2px dashed var(--jg-secondary);
 
 }

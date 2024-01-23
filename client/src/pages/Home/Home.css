@@ -102,13 +102,13 @@
     display: block;
     position: relative;
     overflow: hidden;
-    transition: opacity 0.2s ease-in-out 0s;
+    transition: opacity 0.5s ease-in-out 0s;
 }
 
 .jg-project-card-wrap {
     padding: 10px;
     border: 2px dashed transparent;
-    transition: border 0.2s ease-in-out 0s;
+    transition: border 0.5s ease-in-out 0s;
 }
 
 .jg-project-hover {
@@ -118,6 +118,7 @@
     bottom: 0%;
     left: 0%;
     right: 0%;
+    transition: background-image 0.5s ease-in-out 0s;
 }
 
 .jg-project-name {
