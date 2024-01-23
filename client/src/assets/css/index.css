@@ -340,9 +340,9 @@ p {
 
 .Cookie-Outer {
   position: fixed;
-  bottom: 30px;
-  margin: 0 30px;
-  width: calc(100% - 60px);
+  bottom: 10px;
+  margin: 0 10px;
+  width: calc(100% - 20px);
   max-width: 100%;
   transition: bottom 0.2s ease-in-out 0s;
   border: 2px dashed var(--jg-secondary);
@@ -367,6 +367,7 @@ p {
 .Cookie-button {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.875rem;
 }
 
