@@ -8,6 +8,8 @@ import contactRouter from "./routers/contactRouter.js";
 import projectRouter from "./routers/projectRouter.js";
 import authRouter from "./routers/authRouter.js";
 import blogRouter from "./routers/blogRouter.js";
+import errorHandler from "errorhandler";
+
 const PORT = process.env.PORT || 8080;
 const app = express();
 
@@ -26,6 +28,14 @@ app.use(express.json());
 app.use(cors());
 app.use(helmet());
 app.use(morgan("dev"));
+
+if (process.env.NODE_ENV === "development") {
+  app.use(errorHandler());
+}
+
+if (process.env.NODE_ENV === "production") {
+  app.use(errorHandler());
+}
 
 app.use("/api/v1/contact", contactRouter);
 app.use("/api/v1/project", projectRouter);
