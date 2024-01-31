@@ -33,11 +33,34 @@ dbConnect.on("error", (err) => {
 
 async function handleDisconnect() {
   try {
-    const connection = await getConnection(dbConnect);
-    console.log("DB connection successful");
-    connection.release();
+    await pingDatabase(dbConnect);
+    console.log("DB connection is good.");
   } catch (error) {
     console.error("DB connection failed:", error.message);
+    console.log("Reconnecting to the database...");
+    await reconnect();
+  }
+}
+
+async function pingDatabase(pool) {
+  const connection = await getConnection(pool);
+  return new Promise((resolve, reject) => {
+    connection.ping((pingError) => {
+      connection.release();
+      if (pingError) {
+        reject(pingError);
+      } else {
+        resolve();
+      }
+    });
+  });
+}
+
+async function reconnect() {
+  try {
+    await handleDisconnect();
+  } catch (error) {
+    console.error("Reconnection failed:", error.message);
   }
 }
 
