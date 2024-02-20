@@ -1,0 +1,73 @@
+{"level":"error","message":"Something goes worng","service":"user-service","stack":"Error: Something goes worng\n    at file:///E:/JenilGohel/server/app.js:32:14\n    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)\n    at async loadESM (node:internal/process/esm_loader:34:7)\n    at async handleMainPromise (node:internal/modules/run_main:113:12)","timestamp":"2024-02-01 01:25:11"}
+2024-02-01 01:32:15 error: Something goes worng Error: Something goes worng
+    at file:///E:/JenilGohel/server/app.js:32:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+2024-02-01 23:28:50 error: Something goes worng Error: Something goes worng
+    at file:///E:/JenilGohel/server/app.js:32:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+2024-02-01 23:28:56 error: Something goes worng Error: Something goes worng
+    at file:///E:/JenilGohel/server/app.js:32:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+2024-02-01 23:29:36 error: Something goes worng Error: Something goes worng
+    at file:///E:/JenilGohel/server/app.js:32:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+2024-02-01 23:30:09 error: Something goes worng Error: Something goes worng
+    at file:///E:/JenilGohel/server/app.js:32:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+2024-02-01 23:54:49 error: Something goes worng Error: Something goes worng
+    at file:///E:/JenilGohel/server/app.js:32:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+2024-02-01 23:54:58 error: Something goes worng Error: Something goes worng
+    at file:///E:/JenilGohel/server/app.js:32:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+2024-02-01 23:55:25 error: Something goes worng Error: Something goes worng
+    at file:///E:/JenilGohel/server/app.js:32:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+2024-02-01 23:55:32 error: Something goes worng Error: Something goes worng
+    at file:///E:/JenilGohel/server/app.js:32:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+2024-02-01 23:55:41 error: Something goes worng Error: Something goes worng
+    at file:///E:/JenilGohel/server/app.js:32:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+2024-02-01 23:56:08 error: Something goes worng Error: Something goes worng
+    at file:///E:/JenilGohel/server/app.js:32:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+2024-02-01 23:56:41 error: Something goes worng Error: Something goes worng
+    at file:///E:/JenilGohel/server/app.js:32:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
