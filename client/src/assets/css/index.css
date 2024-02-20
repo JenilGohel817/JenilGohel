@@ -340,13 +340,11 @@ p {
 
 .Cookie-Outer {
   position: fixed;
-  bottom: 30px;
-  margin: 0 30px;
-  width: calc(100% - 60px);
+  bottom: 0px;
+  margin: 0 0px;
+  width: calc(100% - 0px);
   max-width: 100%;
   transition: bottom 0.5s ease-in-out 0s;
-  border: 2px dashed var(--jg-secondary);
-
 }
 
 .Cookie-Outer-In {
