@@ -38,6 +38,12 @@
     flex-flow: column;
     gap: 3rem;
   }
+
+  .jg-about-flex-item-first {
+    position: unset;
+    top: unset;
+  }
+
   .jg-info-item {
     max-width: 100%;
   }
