@@ -86,8 +86,8 @@ const LoginFrom = () => {
                     />
                   </div>
                   <div className="jg-pt30 jg-text-right">
-                    <Link to={"/login/google"} className="google-login">
-                      Sign in with Google
+                    <Link to={"/"} className="google-login">
+                      Back to home
                     </Link>
                   </div>
                   <div className="jg-pt30 jg-text-right">
