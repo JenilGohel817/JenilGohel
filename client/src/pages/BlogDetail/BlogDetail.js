@@ -51,7 +51,7 @@ const BlogDetail = () => {
                     <div key={el.id}>
                       <div className="jg-heading-wrap">
                         <Link to={"/blog"} className="back-to-blog">
-                          🔙 Blog
+                          Back to blog
                         </Link>
                       </div>
                       <div className="jg-about-wrapper">
