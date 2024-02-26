@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
+import User from "../../assets/images/user.png";
+import UserLogout from "../../assets/images/power-off.png";
 
 const Header = () => {
+  const localGetItem = localStorage.getItem("JG");
+
+  const logoutFun = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
+
   const MenuClick = () => {
     const jgIcon = document.querySelector(".jg-header-menu-right");
     const jgLineOne = document.querySelector(".jg-header-menu-icon-line-one");
@@ -93,7 +102,47 @@ const Header = () => {
                       Contect Us
                     </Link>
                   </li>
+                  {localGetItem && (
+                    <>
+                      <li>
+                        <Link
+                          className="jg-header-link"
+                          onClick={MenuHeaderClick}
+                          to={"/addblog"}
+                        >
+                          Add Blog
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="jg-header-link"
+                          onClick={MenuHeaderClick}
+                          to={"/addproject"}
+                        >
+                          Add Project
+                        </Link>
+                      </li>
+                    </>
+                  )}
                 </ul>
+              </div>
+              <div className="Header-image-wrapper">
+                {localGetItem ? (
+                  <>
+                    <img
+                      onClick={logoutFun}
+                      className="Header-image"
+                      src={UserLogout}
+                      alt="User"
+                    />
+                  </>
+                ) : (
+                  <>
+                    <Link to={"/login"}>
+                      <img className="Header-image" src={User} alt="User" />
+                    </Link>
+                  </>
+                )}
               </div>
             </div>
           </div>

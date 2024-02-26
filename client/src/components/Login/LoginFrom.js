@@ -47,7 +47,7 @@ const LoginFrom = () => {
               <div className="jg-register-item">
                 <div className="jg-heading-wrap">
                   <div className="jg-heading-subtitle">Login</div>
-                  <h2>Help us get to know you:</h2>
+                  <h2>Manage your account</h2>
                 </div>
                 <form
                   className="jg-contact-form"
